@@ -1,0 +1,174 @@
+<script setup lang="ts">
+import type { CostBasis, MatchedAcquisitions, MatchedAcquisitionsEvent } from '@/types/reports';
+import type { DataTableColumn, DataTableSortData } from '@rotki/ui-library';
+
+type Acquisition = Omit<MatchedAcquisitions, 'event'> & MatchedAcquisitionsEvent;
+
+const props = withDefaults(
+  defineProps<{
+    costBasis: CostBasis;
+    currency?: string | null;
+    showGroupLine?: boolean;
+  }>(),
+  {
+    currency: null,
+    showGroupLine: false,
+  },
+);
+
+const { t } = useI18n();
+
+const { costBasis, currency } = toRefs(props);
+
+const sort = ref<DataTableSortData<Acquisition>>({
+  column: 'timestamp',
+  direction: 'asc',
+});
+
+const cols = computed<DataTableColumn<Acquisition>[]>(() => [
+  {
+    label: t('cost_basis_table.headers.amount'),
+    key: 'amount',
+    align: 'end',
+    sortable: true,
+  },
+  {
+    label: t('cost_basis_table.headers.full_amount'),
+    key: 'fullAmount',
+    align: 'end',
+    sortable: true,
+  },
+  {
+    label: t('cost_basis_table.headers.remaining_amount'),
+    key: 'remainingAmount',
+    align: 'end',
+    sortable: true,
+  },
+  {
+    label: t('cost_basis_table.headers.rate', {
+      currency: get(currency),
+    }),
+    key: 'rate',
+    align: 'end',
+    sortable: true,
+  },
+  {
+    label: t('common.datetime'),
+    key: 'timestamp',
+    align: 'end',
+    sortable: true,
+  },
+  {
+    label: t('cost_basis_table.headers.taxable'),
+    key: 'taxable',
+    sortable: true,
+  },
+]);
+
+const matchedAcquisitions = computed<Acquisition[]>(() => {
+  const acquisitions = get(costBasis).matchedAcquisitions;
+  if (!acquisitions)
+    return [];
+
+  return acquisitions.map((acquisition) => {
+    const { event, ...rest } = acquisition;
+
+    return {
+      ...rest,
+      ...event,
+    };
+  });
+});
+</script>
+
+<template>
+  <div class="relative">
+    <div
+      v-if="showGroupLine"
+      :class="$style.group"
+    >
+      <div :class="$style.group__line" />
+    </div>
+
+    <div
+      :class="{ 'pl-[2.125rem]': showGroupLine }"
+      class="grow"
+    >
+      <div class="flex pb-4 items-center gap-4">
+        <p class="text-body-1 mb-0">
+          {{ t('cost_basis_table.cost_basis') }}
+        </p>
+        <RuiChip
+          v-if="costBasis.isComplete"
+          size="sm"
+          color="success"
+        >
+          {{ t('cost_basis_table.complete') }}
+        </RuiChip>
+        <RuiChip
+          v-else
+          size="sm"
+          color="error"
+        >
+          {{ t('cost_basis_table.incomplete') }}
+        </RuiChip>
+      </div>
+      <RuiCard
+        variant="flat"
+        no-padding
+      >
+        <RuiDataTable
+          v-model:sort="sort"
+          :class="$style.table"
+          :rows="matchedAcquisitions"
+          :cols="cols"
+          row-attr="amount"
+          outlined
+        >
+          <template #item.amount="{ row }">
+            <AmountDisplay
+              force-currency
+              :value="row.amount"
+            />
+          </template>
+          <template #item.fullAmount="{ row }">
+            <AmountDisplay
+              force-currency
+              :value="row.fullAmount"
+            />
+          </template>
+          <template #item.remainingAmount="{ row }">
+            <AmountDisplay
+              force-currency
+              :value="row.fullAmount.minus(row.amount)"
+            />
+          </template>
+          <template #item.rate="{ row }">
+            <AmountDisplay
+              force-currency
+              :value="row.rate"
+              show-currency="symbol"
+              :fiat-currency="currency"
+            />
+          </template>
+          <template #item.timestamp="{ row }">
+            <DateDisplay :timestamp="row.timestamp" />
+          </template>
+          <template #item.taxable="{ row }">
+            <SuccessDisplay :success="row.taxable" />
+          </template>
+        </RuiDataTable>
+      </RuiCard>
+    </div>
+  </div>
+</template>
+
+<style module lang="scss">
+.group {
+  @apply absolute w-0.5 -top-[1px] -bottom-4 left-[0.8125rem];
+
+  &__line {
+    @apply border-l-2 border-dashed border-rui-primary h-full transform -translate-x-1/2;
+  }
+}
+</style>

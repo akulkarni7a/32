@@ -1,0 +1,29 @@
+<script setup lang="ts">
+interface Props {
+  size?: string;
+  chain: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  size: '26px',
+});
+
+const { chain } = toRefs(props);
+
+const { getChainImageUrl } = useSupportedChains();
+
+const src = getChainImageUrl(chain);
+</script>
+
+<template>
+  <AdaptiveWrapper>
+    <AppImage
+      :src="src"
+      :width="size"
+      :max-width="size"
+      :height="size"
+      :max-height="size"
+      contain
+    />
+  </AdaptiveWrapper>
+</template>

@@ -1,0 +1,6 @@
+CPT_UNISWAP = 'uniswap'
+CPT_BADGER = 'badger'
+CPT_ONEINCH = '1inch'
+CPT_FRAX = 'frax'
+CPT_SHAPESHIFT = 'shapeshift'
+CPT_ELEMENT_FINANCE = 'element-finance'

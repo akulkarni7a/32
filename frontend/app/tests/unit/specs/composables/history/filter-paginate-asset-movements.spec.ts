@@ -1,0 +1,135 @@
+import flushPromises from 'flush-promises';
+import { afterEach, assertType, beforeAll, beforeEach, describe, expect, expectTypeOf, it, vi } from 'vitest';
+import type { Filters, Matcher } from '@/composables/filters/asset-movement';
+import type { Collection } from '@/types/collection';
+import type { AssetMovement, AssetMovementEntry, AssetMovementRequestPayload } from '@/types/history/asset-movements';
+import type { MaybeRef } from '@vueuse/core';
+import type Vue from 'vue';
+
+vi.mock('vue-router', () => {
+  const route = ref({
+    query: {},
+  });
+  return {
+    useRoute: vi.fn().mockReturnValue(route),
+    useRouter: vi.fn().mockReturnValue({
+      push: vi.fn(({ query }) => {
+        set(route, { query });
+        return true;
+      }),
+    }),
+  };
+});
+
+vi.mock('vue', async () => {
+  const mod = await vi.importActual<typeof Vue>('vue');
+
+  return {
+    ...mod,
+    onBeforeMount: vi.fn().mockImplementation((fn: Function) => fn()),
+  };
+});
+
+describe('composables::history/filter-paginate', () => {
+  let fetchAssetMovements: (payload: MaybeRef<AssetMovementRequestPayload>) => Promise<Collection<AssetMovementEntry>>;
+  const locationOverview = ref<string | null>('');
+  const mainPage = ref<boolean>(false);
+  const router = useRouter();
+  const route = useRoute();
+
+  beforeAll(() => {
+    setActivePinia(createPinia());
+    fetchAssetMovements = useAssetMovements().fetchAssetMovements;
+  });
+
+  afterEach(() => {
+    vi.clearAllMocks();
+  });
+
+  describe('components::history/trades/DepositsWithdrawalsContent', () => {
+    set(locationOverview, '');
+
+    beforeEach(() => {
+      set(mainPage, true);
+    });
+
+    it('initialize composable correctly', async () => {
+      const { userAction, filters, sort, state, fetchData, applyRouteFilter, isLoading } = usePaginationFilters<
+        AssetMovement,
+        AssetMovementRequestPayload,
+        AssetMovementEntry,
+        Collection<AssetMovementEntry>,
+        Filters,
+        Matcher
+      >(locationOverview, mainPage, useAssetMovementFilters, fetchAssetMovements);
+
+      expect(get(userAction)).toBe(true);
+      expect(get(isLoading)).toBe(false);
+      expect(get(filters)).to.toStrictEqual({});
+      expect(Array.isArray(get(sort))).toBe(true);
+      expect(get(sort)).toHaveLength(1);
+      expect(get(state).data).toHaveLength(0);
+      expect(get(state).total).toEqual(0);
+
+      set(userAction, true);
+      applyRouteFilter();
+      fetchData().catch(() => {});
+      expect(get(isLoading)).toBe(true);
+      await flushPromises();
+      expect(get(state).total).toEqual(45);
+    });
+
+    it('check the return types', () => {
+      const { isLoading, state, filters, matchers } = usePaginationFilters<
+        AssetMovement,
+        AssetMovementRequestPayload,
+        AssetMovementEntry,
+        Collection<AssetMovementEntry>,
+        Filters,
+        Matcher
+      >(locationOverview, mainPage, useAssetMovementFilters, fetchAssetMovements);
+
+      expect(get(isLoading)).toBe(false);
+
+      expectTypeOf(get(state)).toEqualTypeOf<Collection<AssetMovementEntry>>();
+      expectTypeOf(get(state).data).toEqualTypeOf<AssetMovementEntry[]>();
+      expectTypeOf(get(state).found).toEqualTypeOf<number>();
+      expectTypeOf(get(filters)).toEqualTypeOf<Filters>();
+      expectTypeOf(get(matchers)).toEqualTypeOf<Matcher[]>();
+    });
+
+    it('modify filters and fetch data correctly', async () => {
+      const pushSpy = vi.spyOn(router, 'push');
+      const query = { sortBy: ['category'], sortDesc: ['true'] };
+
+      const { isLoading, state } = usePaginationFilters<
+        AssetMovement,
+        AssetMovementRequestPayload,
+        AssetMovementEntry,
+        Collection<AssetMovementEntry>,
+        Filters,
+        Matcher
+      >(locationOverview, mainPage, useAssetMovementFilters, fetchAssetMovements);
+
+      await router.push({
+        query,
+      });
+
+      expect(pushSpy).toHaveBeenCalledOnce();
+      expect(pushSpy).toHaveBeenCalledWith({ query });
+      expect(get(route).query).toEqual(query);
+      expect(get(isLoading)).toBe(true);
+      await flushPromises();
+      expect(get(isLoading)).toBe(false);
+
+      assertType<Collection<AssetMovementEntry>>(get(state));
+      assertType<AssetMovementEntry[]>(get(state).data);
+      assertType<number>(get(state).found);
+
+      expect(get(state).data).toHaveLength(10);
+      expect(get(state).found).toEqual(45);
+      expect(get(state).limit).toEqual(-1);
+      expect(get(state).total).toEqual(45);
+    });
+  });
+});

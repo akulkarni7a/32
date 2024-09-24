@@ -1,0 +1,62 @@
+<script setup lang="ts">
+import useVuelidate from '@vuelidate/core';
+import { helpers, required } from '@vuelidate/validators';
+import { displayDateFormatter } from '@/data/date-formatter';
+import { toMessages } from '@/utils/validation';
+
+const dateInputFormat = ref<string>('');
+const { dateInputFormat: inputFormat } = storeToRefs(useFrontendSettingsStore());
+
+const { t } = useI18n();
+
+function containsValidDirectives(v: string) {
+  return displayDateFormatter.containsValidDirectives(v);
+}
+
+const rules = {
+  dateInputFormat: {
+    required: helpers.withMessage(t('general_settings.date_display.validation.empty'), required),
+    containsValidDirectives: helpers.withMessage(
+      t('general_settings.date_display.validation.invalid'),
+      containsValidDirectives,
+    ),
+  },
+};
+
+const v$ = useVuelidate(rules, { dateInputFormat }, { $autoDirty: true });
+const { callIfValid } = useValidation(v$);
+
+function resetDateInputFormat() {
+  set(dateInputFormat, get(inputFormat));
+}
+
+function successMessage(dateFormat: string) {
+  return t('general_settings.validation.date_input_format.success', {
+    dateFormat,
+  });
+}
+
+onMounted(() => {
+  resetDateInputFormat();
+});
+</script>
+
+<template>
+  <SettingsOption
+    #default="{ error, success, updateImmediate }"
+    setting="dateInputFormat"
+    frontend-setting
+    :error-message="t('general_settings.validation.date_input_format.error')"
+    :success-message="successMessage"
+    @finished="resetDateInputFormat()"
+  >
+    <DateInputFormatSelector
+      v-model="dateInputFormat"
+      :label="t('general_settings.labels.date_input_format')"
+      class="general-settings__fields__date-input-format"
+      :success-messages="success ? [success] : []"
+      :error-messages="error ? [error] : toMessages(v$.dateInputFormat)"
+      @update:model-value="callIfValid($event, updateImmediate)"
+    />
+  </SettingsOption>
+</template>

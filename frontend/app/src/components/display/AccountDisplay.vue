@@ -1,0 +1,97 @@
+<script setup lang="ts">
+import { type Account, Blockchain } from '@rotki/common';
+import { truncateAddress } from '@/utils/truncate';
+
+const props = withDefaults(defineProps<{
+  account: Account;
+  useAliasName?: boolean;
+  truncate?: boolean;
+  hideChainIcon?: boolean;
+}>(), {
+  useAliasName: true,
+  truncate: true,
+  hideChainIcon: false,
+});
+
+const { account, useAliasName } = toRefs(props);
+
+const { t } = useI18n();
+
+const { addressNameSelector } = useAddressesNamesStore();
+
+const { scrambleData, shouldShowAmount, scrambleAddress } = useScramble();
+
+const address = computed<string>(() => {
+  const address = get(account).address;
+  return scrambleAddress(address);
+});
+
+const aliasName = computed<string | null>(() => {
+  if (!get(scrambleData) && get(useAliasName)) {
+    const { address, chain } = get(account);
+    const chainId = chain === 'ALL' ? Blockchain.ETH : chain;
+    const name = get(addressNameSelector(address, chainId));
+    if (name)
+      return truncateAddress(name, 10);
+  }
+
+  return null;
+});
+</script>
+
+<template>
+  <RuiTooltip
+    :popper="{ placement: 'top' }"
+    :open-delay="400"
+    :disabled="!truncate"
+    class="flex items-center flex-nowrap gap-2"
+    tooltip-class="[&_*]:font-mono"
+  >
+    <template #activator>
+      <div
+        v-if="!hideChainIcon"
+        class="pr-1"
+      >
+        <div class="rounded-full overflow-hidden w-6 h-6 dark:bg-rui-grey-600 flex items-center justify-center">
+          <ChainIcon
+            v-if="account.chain && account.chain !== 'ALL'"
+            size="22px"
+            :chain="account.chain"
+          />
+          <RuiTooltip
+            v-else
+            :popper="{ placement: 'top' }"
+            :open-delay="400"
+          >
+            <template #activator>
+              <RuiIcon
+                name="links-line"
+                class="text-rui-text-secondary"
+              />
+            </template>
+            {{ t('common.multi_chain') }}
+          </RuiTooltip>
+        </div>
+      </div>
+
+      <EnsAvatar
+        :address="address"
+        avatar
+        class="mr-2"
+      />
+
+      <div
+        :class="{ blur: !shouldShowAmount }"
+        class="text-no-wrap [&_*]:font-mono text-xs"
+      >
+        <div v-if="aliasName">
+          {{ aliasName }}
+        </div>
+        <div v-else>
+          {{ truncate ? truncateAddress(address, 6) : address }}
+        </div>
+      </div>
+    </template>
+    {{ account.address }}
+  </RuiTooltip>
+</template>

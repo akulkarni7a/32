@@ -1,0 +1,85 @@
+User_ID,UTC_Time,Account,Operation,Coin,Change,Remark
+1,2020-10-28 22:03:03,Spot,Transaction Related,BNB,0.576474665,
+1,2020-10-28 22:03:03,Spot,Deposit,EUR,245.25,
+1,2020-10-28 22:03:03,Spot,Transaction Related,EUR,-245.25,
+1,,Spot,Withdraw,BTC,0.05,Testing empty cells
+1,2020-10-28 22:21:44,Spot,Deposit,,,
+1,2020-10-28 23:11:02,Spot,POS savings purchase,BNB,-0.577257355,
+1,2020-10-30 07:16:38,Spot,Transaction Related,EUR,-150,
+1,2020-10-30 07:16:38,Spot,Transaction Related,AXS,1.19592356,
+1,2020-10-30 14:21:20,Spot,Fee,ETH,-3.605E-05,
+1,2020-10-30 14:21:20,Spot,Buy,EUR,-134.4719075,
+1,2020-10-30 14:21:20,Spot,Buy,ETH,0.03605,
+1,2020-10-30 15:09:05,Spot,ETH 2.0 Staking,BETH,0.036,
+1,2020-10-30 15:09:05,Spot,ETH 2.0 Staking,ETH,-0.036,
+1,2020-11-01 09:36:13,Spot,ETH 2.0 Staking Rewards,BETH,4.615E-06,
+1,2020-11-01 23:50:10,Spot,Launchpool Interest,DAR,0.115147055,
+1,2020-11-03 21:12:59,Spot,Buy,EUR,-333.209174,
+1,2020-11-03 21:12:59,Spot,Fee,BNB,-9.009E-05,
+1,2020-11-03 21:12:59,Spot,Buy,ETH,0.0148,
+1,2020-11-03 21:12:59,Spot,Fee,ETH,-8.345E-05,
+1,2020-11-03 21:12:59,Spot,Buy,EUR,-59.089888,
+1,2020-11-03 21:12:59,Spot,Buy,ETH,0.08345,
+1,2020-11-04 00:36:28,Spot,POS savings redemption,AXS,1.18837124,
+1,2020-11-04 02:28:08,Spot,POS savings interest,BNB,9.2675E-05,
+1,2020-11-12 08:21:54,Spot,Sell,IOTA,-67.5,
+1,2020-11-12 08:21:54,Spot,Fee,BNB,-0.0001057,
+1,2020-11-12 08:21:54,Spot,Sell,BTC,0.001366875,
+1,2020-11-20 20:22:20,Spot,Small assets exchange BNB,SOL,-0.002055565,
+1,2020-11-20 20:22:20,Spot,Small assets exchange BNB,SOL,-0.00014477,
+1,2020-11-20 20:22:20,Spot,Small assets exchange BNB,BNB,0.00072724,
+1,2020-11-20 20:22:20,Spot,Small assets exchange BNB,BNB,0.000237955,Should be skipped
+1,2020-11-20 20:22:21,Spot,Small assets exchange BNB,BNB,0.000964505,Should be skipped
+1,2020-11-20 20:22:21,Spot,Small assets exchange BNB,BTC,-9.895E-06,Should be skipped
+1,2020-11-20 20:22:21,Spot,Small assets exchange BNB,BNB,4.76E-06,
+1,2020-11-20 22:18:01,Spot,Fee,USDT,-1.15756,
+1,2020-11-20 22:18:01,Spot,Sell,USDT,1157.56,
+1,2020-11-20 22:18:01,Spot,Sell,DAR,-336.5,
+1,2020-11-20 22:30:01,Spot,Fee,IOTA,-0.882,
+1,2020-11-20 22:30:01,Spot,Buy,IOTA,882,
+1,2020-11-20 22:30:01,Spot,Buy,USDT,-1146.3354,
+1,2020-12-01 20:06:44,Spot,Withdraw,KNC,-0.16,Withdraw fee is included
+1,2020-12-01 20:06:45,Spot,ABC,ETH,-15,This is to test non-existent row type
+1,2020-12-01 15:51:47,Spot,Transaction Related,ETH,-1.01065076,""
+1,2020-12-01 15:51:47,Spot,Buy,BTC,0.10680859385,""
+1,2020-12-01 15:51:47,Spot,Transaction Related,ETH,-0.9049715199999999,""
+1,2020-12-01 15:51:47,Spot,Fee,BNB,-0.041427214681599996,""
+1,2020-12-01 15:51:47,Spot,Fee,BNB,-0.0462623227152,""
+1,2020-12-01 15:51:47,Spot,Buy,BTC,0.09564009919439999,""
+1,2020-12-02 22:30:01,Spot,Buy,IOTA,882,"Trade with no fee for test"
+1,2020-12-02 22:30:01,Spot,Buy,USDT,-1146.3354,
+1,2021-12-31 00:33:45,Spot,Transfer Between Main and Funding Wallet,USDT,500.00000000,""
+1,2021-12-31 00:33:45,Funding,Transfer Between Main and Funding Wallet,USDT,-500.00000000,""
+1,2021-12-31 01:00:22,Spot,Transfer Between Spot Account and UM Futures Account,USDT,100.00000000,""
+1,2021-12-31 01:00:22,USD-MFutures,Transfer Between Spot Account and UM Futures Account,USDT,-100.00000000,""
+1,2021-12-31 01:05:06,Spot,Transfer Between Spot Account and CM Futures Account,USDT,60.00000000,""
+1,2021-12-31 01:05:06,Coin-MFutures,Transfer Between Spot Account and CM Futures Account,USDT,-60.00000000,""
+1,2021-12-31 01:18:18,Spot,Transfer Between Spot Account and UM Futures Account,USDT,40.00000000,""
+1,2021-12-31 01:18:18,USD-MFutures,Transfer Between Spot Account and UM Futures Account,USDT,-40.00000000,""
+1,2023-01-13 05:29:00,Spot,Simple Earn Locked Rewards,MATIC,0.00001605,Binance Earn
+1,2023-01-13 06:01:00,Spot,Simple Earn Flexible Interest,BUSD,0.00003634,Binance Earn
+1,2023-01-13 06:57:00,Spot,Simple Earn Flexible Subscription,BUSD,-0.00003634,Binance Earn
+1,2023-01-13 05:29:00,Spot,Simple Earn Locked Rewards,MATIC,0.00001605,Binance Earn
+1,2023-01-13 06:12:00,Spot,Simple Earn Flexible Interest,BUSD,0.00003634,Binance Earn
+1,2023-01-13 07:06:00,Spot,Simple Earn Flexible Subscription,BUSD,-0.00003634,Binance Earn
+1,2023-06-05 19:47:00,Spot,Binance Convert,BUSD,-125.626918
+1,2023-06-05 19:47:00,Spot,Binance Convert,MATIC,140.1195285
+1,2023-06-10 09:35:00,Spot,BNB Vault Rewards,SUI,0.0080696
+1,2023-06-12 03:01:26,Spot,Staking Redemption,BNB,0.95901726,""
+1,2023-06-12 03:11:08,Spot,Staking Purchase,BNB,-0.96455172,""
+1,2023-06-12 04:11:29,Spot,Simple Earn Locked Subscription,MATIC,-602.5193197,Binance Earn
+1,2023-06-12 12:06:41,Spot,Buy Crypto,BUSD,479.6780028,""
+1,2023-06-12 12:09:22,Spot,Fiat Deposit,EUR,2435.34,""
+1,2023-06-15 10:29:11,Spot,Cash Voucher Distribution,BUSD,0.35628294,""
+1,2023-06-15 10:30:00,Spot,Mission Reward Distribution,BUSD,4.87068,""
+1,2023-07-25 05:18:04,Spot,Transaction Revenue,USDT,2641.26410000,""
+1,2023-07-25 05:18:04,Spot,Transaction Sold,USDC,-2641.00000000,""
+1,2023-07-28 18:48:58,Spot,Transaction Revenue,USDT,26.82490000,""
+1,2023-07-28 18:48:58,Spot,Transaction Sold,SOL,-1.07000000,""
+1,2023-07-28 18:48:58,Spot,Transaction Fee,BNB,-0.00008316,""
+1,2023-09-12 08:00:02,USD-MFutures,Funding Fee,USDT,-0.07779065,""
+1,2023-09-13 16:43:41,USD-MFutures,Realized Profit and Loss,USDT,-0.05576000,""
+1,2023-09-13 16:43:41,USD-MFutures,Realized Profit and Loss,USDT,1.29642000,""
+1,2023-09-29 09:56:26,Spot,Transaction Buy,ETH,0.01700000,""
+1,2023-09-29 09:56:26,Spot,Transaction Fee,BNB,-0.00009883,""
+1,2023-09-29 09:56:26,Spot,Transaction Spend,USDT,-28.46106000,""

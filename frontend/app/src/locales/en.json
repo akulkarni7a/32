@@ -1,0 +1,4861 @@
+{
+  "aave_lending": {
+    "header": "Aave Loan ({asset})",
+    "history": "Aave History"
+  },
+  "about": {
+    "app_version": "App Version:",
+    "components": {
+      "build": "Build:",
+      "title": "Premium Components",
+      "version": "Premium Version:"
+    },
+    "copy_data_directory_tooltip": "Copy data directory",
+    "copy_information_tooltip": "Copy the application information",
+    "data_directory": "Data Directory:",
+    "electron": "Electron:",
+    "frontend_version": "Frontend Version:",
+    "open_data_dir_tooltip": "Open the data directory",
+    "platform": "Platform:",
+    "release_notes": "What's new",
+    "user_agent": "User Agent:"
+  },
+  "eth_validator_combined_filter": {
+    "status": "Filter by the status of the validator"
+  },
+  "account_balance_table": {
+    "liabilities": "Liabilities"
+  },
+  "account_balances": {
+    "aggregated_assets": "Aggregated assets",
+    "confirm_delete": {
+      "description_address": "Are you sure you want to delete {address} address",
+      "description_xpub": "Are you sure you want to delete {address}",
+      "title": "Account delete",
+      "agnostic": {
+        "description": "Are you sure you want to delete account {address} for all chains?"
+      }
+    },
+    "chain_filter": {
+      "add": "Add \"{chain}\" to filter",
+      "remove": "Remove \"{chain}\" from filter"
+    },
+    "data_table": {
+      "loading": "Please wait while rotki queries the blockchain...",
+      "group": "{type} accounts"
+    },
+    "detect_tokens": {
+      "tooltip": {
+        "last_detected": "Last detected: {time}",
+        "redetect": "Re-detect tokens",
+        "redetect_all": "Re-detect tokens for all addresses"
+      }
+    },
+    "edit_tooltip": "Edit account",
+    "headers": {
+      "usd_value": "{symbol} value"
+    },
+    "per_chain": "Per chain",
+    "refresh_tooltip": "Refresh {blockchain} balances ignoring any cached entries"
+  },
+  "account_form": {
+    "advanced_tooltip": "Display the advanced xpub options | Hide the advanced xpub options",
+    "error": {
+      "description": "Error while adding account: {error}",
+      "title": "Adding Account"
+    },
+    "labels": {
+      "addresses": "Addresses",
+      "addresses_entries": "no entries | {count} unique entry | {count} unique entries",
+      "addresses_hint": "Insert multiple comma separated addresses",
+      "blockchain": "Choose blockchain | Choose blockchains",
+      "btc": {
+        "derivation_path": "Derivation Path",
+        "xpub": "XPUB"
+      },
+      "multiple": "Add multiple addresses"
+    },
+    "validation": {
+      "address_non_empty": "The address cannot be empty",
+      "xpub_non_empty": "The XPUB field cannot be empty"
+    }
+  },
+  "account_management": {
+    "about_tooltip": "Show the application's about modal",
+    "creation": {
+      "error": "Account creation failed"
+    }
+  },
+  "account_settings": {
+    "cost_basis_method_settings": {
+      "labels": {
+        "acb": "Average Cost Basis",
+        "fifo": "First In, First Out",
+        "hifo": "Highest In, First Out",
+        "lifo": "Last In, First Out"
+      }
+    },
+    "csv_export_settings": {
+      "labels": {
+        "export_csv_formulas": "Should formulas be exported as part of the PnL CSV?",
+        "have_csv_summary": "Should a summary of all events be included in the all events CSV export?"
+      },
+      "title": "CSV Export Settings"
+    },
+    "messages": {
+      "account_for_assets_movements": "Error setting account for assets movements: {message}",
+      "cost_basis": {
+        "disabled": "Successfully disabled past cost basis calculation",
+        "enabled": "Successfully enabled past cost basis calculation",
+        "error": "Failed to change cost basis calculation: {message}"
+      },
+      "cost_basis_method": {
+        "error": "Failed to change cost basis method to {method}: {message}",
+        "success": "Successfully change cost basis method to {method}"
+      },
+      "crypto_to_crypto": "Error setting crypto to crypto: {message}",
+      "eth_staking_taxable_after_withdrawal": {
+        "disabled": "Successfully disabled eth staking taxable after withdrawal setting",
+        "enabled": "Successfully enabled eth staking taxable after withdrawal setting",
+        "error": "Failed to change eth staking taxable after withdrawal setting: {message}"
+      },
+      "include_fees_in_cost_basis": {
+        "disabled": "Successfully disabled cost basis fees setting",
+        "enabled": "Successfully enabled cost basis fees setting",
+        "error": "Failed to change cost basis fees settings: {message}"
+      },
+      "export_csv_formulas": "Error setting the option to include formulas in CSV export: {message}",
+      "gas_costs": "Error setting Ethereum gas costs: {message}",
+      "have_csv_summary": "Error setting the option to include summary in CSV export: {message}",
+      "tax_free": "Tax free period {enabled}",
+      "tax_free_period": "Tax free period set to {period} days"
+    },
+    "validation": {
+      "tax_free_days": "Please enter the number of days",
+      "tax_free_days_gt_zero": "The number of days cannot be negative or zero"
+    }
+  },
+  "account_settings_display": {
+    "account_asset_movement": "Account asset movement fees were taken into account:",
+    "cost_basis_fees": "Cost basis fees were taken into account:",
+    "cost_basis_method": "Cost basis method:",
+    "crypto2crypto": "Crypto to crypto trades were taken into account:",
+    "days": "{days} days",
+    "eth_staking_taxable_after_withdrawal_enabled": "ETH staking events are omitted until withdrawals are enabled:",
+    "gas_costs": "Gas costs were taken into account:",
+    "past_cost_basis": "Past cost basis was calculated during the report creation:",
+    "profit_currency": "Profit Currency:",
+    "subtitle": "These accounting setting were used during the report creation",
+    "tax_free_period": "There was a tax free period:",
+    "title": "Accounting Settings"
+  },
+  "accounting_settings": {
+    "rule": {
+      "add": "Add accounting rule",
+      "add_error": "Could not add accounting rule: {message}",
+      "confirm_delete": "Are you sure you want to delete this custom accounting rule?",
+      "conflicts": {
+        "error": {
+          "description": "Error while resolving accounting rules conflicts: {error}",
+          "title": "Resolving accounting rules conflicts"
+        },
+        "fetch_error": {
+          "title": "Retrieving accounting rules conflicts",
+          "message": "Failed retrieving accounting rules conflicts: {message}"
+        },
+        "labels": {
+          "choose_version": "Choose Version"
+        },
+        "title": "Resolve accounting rules conflicts"
+      },
+      "current_setting_value": "Current setting value:",
+      "delete": "Delete accounting rule",
+      "delete_error": "Could not delete accounting rule: {message}",
+      "edit": "Edit accounting rule",
+      "edit_error": "Could not edit accounting rule: {message}",
+      "export": "Export accounting rules",
+      "fetch_error": {
+        "title": "Retrieving accounting rules",
+        "message": "Failed retrieving accounting rules: {message}"
+      },
+      "filter": {
+        "counterparty": "filter by counterparty",
+        "event_subtype": "filter by event sub type",
+        "event_type": "filter by event type"
+      },
+      "import": "Import accounting rules",
+      "labels": {
+        "accounting_treatment": "Accounting Treatment",
+        "count_cost_basis_pnl": "Count cost basis PnL",
+        "count_cost_basis_pnl_subtitle": "Whether we have to count any profit/loss the asset may have had compared to when it was acquired.",
+        "count_entire_amount_spend": "Count entire amount spend",
+        "count_entire_amount_spend_subtitle": "Whether the entire amount is counted as a spend, which means an expense (negative pnl)",
+        "event_subtype": "Event Sub Type",
+        "event_type": "Event Type",
+        "taxable": "Taxable",
+        "taxable_subtitle": "Whether the event will be considered as taxable"
+      },
+      "overwrite_by_setting": "Overwrite by value from other accounting setting",
+      "refresh_tooltip": "Refresh accounting rules",
+      "title": "Event Accounting Rules",
+      "value_overwritten": "The value is overwritten by this setting:"
+    },
+    "trade": {
+      "labels": {
+        "account_for_assets_movements": "Take into account assets movements fees",
+        "calculate_past_cost_basis": "Calculate past cost basis when creating the report",
+        "include_fees_in_cost_basis": "Take into account cost basis fees",
+        "cost_basis_method": "Cost basis method",
+        "eth_staking_taxable_after_withdrawal_enabled": "Should omit ETH staking events from accounting until withdrawals are enabled",
+        "include_crypto2crypto": "Take into account crypto to crypto trades",
+        "include_gas_costs": "Take into account Ethereum gas costs",
+        "tax_free": "Is there a tax free period?",
+        "taxfree_after_period": "Tax free after how many days"
+      },
+      "title": "Trade Settings"
+    }
+  },
+  "actions": {
+    "accounting_rules": {
+      "export": {
+        "message": {
+          "failure": "Accounting rules export failed: {description}",
+          "success": "Accounting rules exported successfully"
+        },
+        "title": "Accounting Rules Export"
+      },
+      "import": {
+        "message": {
+          "failure": "Accounting rules import failed: {description}",
+          "success": "Accounting rules imported successfully"
+        },
+        "title": "Accounting Rules Import"
+      }
+    },
+    "add_eth2_validator": {
+      "error": {
+        "description": "There was an error while adding the ETH staking validator {id}: {message}",
+        "title": "Adding ETH staking validator"
+      },
+      "task": {
+        "description": "Adding ETH staking validator",
+        "title": "Adding validator: {id}"
+      }
+    },
+    "asset_movements": {
+      "error": {
+        "description": "Failed query for {exchange}: {error}",
+        "title": "Deposits & withdrawals for {exchange}"
+      },
+      "task": {
+        "description": "Retrieving deposits & withdrawals for {exchange}",
+        "title": "Exchange Deposits & withdrawals"
+      }
+    },
+    "assets": {
+      "erc20": {
+        "error": {
+          "description": "There was an error while retrieving token details: {message}",
+          "title": "Retrieving token details for {address} ({evmChain})"
+        },
+        "task": {
+          "title": "Retrieving token details for {address} ({evmChain})"
+        }
+      },
+      "import": {
+        "task": {
+          "title": "Importing user assets"
+        }
+      },
+      "reset": {
+        "task": {
+          "title": "Resetting assets database"
+        }
+      },
+      "update": {
+        "error": {
+          "description": "The asset database update failed: {message}"
+        },
+        "task": {
+          "title": "Updating assets database"
+        }
+      },
+      "versions": {
+        "error": {
+          "description": "The asset database update check failed: {message}"
+        },
+        "task": {
+          "title": "Checking for asset database updates"
+        }
+      }
+    },
+    "balances": {
+      "all_balances": {
+        "error": {
+          "message": "Failed to fetch all balances: {message}",
+          "title": "Querying all Balances"
+        },
+        "task": {
+          "title": "Query All Balances"
+        }
+      },
+      "blockchain": {
+        "error": {
+          "description": "Error at querying blockchain balances: {error}",
+          "title": "Querying blockchain balances"
+        },
+        "task": {
+          "title": "Query {chain} balances"
+        }
+      },
+      "blockchain_account_removal": {
+        "error": {
+          "description": "Failed to remove the account: {error}",
+          "title": "Removing {count} {blockchain} account(s)"
+        },
+        "task": {
+          "description": "{count} accounts are being removed",
+          "title": "Removing {blockchain} account"
+        },
+        "agnostic": {
+          "error": {
+            "title": "Removing account for address {address}"
+          },
+          "task": {
+            "description": "Account {address} are being removed",
+            "title": "Removing blockchain account"
+          }
+        }
+      },
+      "blockchain_accounts_add": {
+        "error": {
+          "failed": "Failed to add address {address} to these chains:\n {list}",
+          "non_eth": "All non ETH chains",
+          "failed_reason": {
+            "no_activity": "No activity",
+            "existed": "Has been added before",
+            "is_contract": "Is ETH contract address"
+          },
+          "description": "Failed to add {addresses} new {blockchain} accounts: {error}",
+          "failed_list_description": "Failed to add {addresses} new {blockchain} accounts. Please check again if these account(s) are valid:\n {list}"
+        },
+        "success": {
+          "description": "Address {address} is successfully added for all EVM chains | Address {address} is successfully added for these chains: \n {list}"
+        },
+        "no_new": {
+          "description": "The selected addresses are already tracked by rotki"
+        },
+        "task": {
+          "description": "Adding {address}",
+          "title": "Adding {blockchain} account"
+        }
+      },
+      "create_oracle_cache": {
+        "already_running": "Task is already running",
+        "error": {
+          "message": "Failed to create oracle cache: {message}",
+          "title": "Create oracle cache"
+        },
+        "failed": "Failed while creating a cache entry from {fromAsset} to {toAsset} on source: {error}",
+        "task": "Creating cache entry from {fromAsset} to {toAsset} on {source}"
+      },
+      "detect_tokens": {
+        "error": {
+          "message": "Failed to detect tokens for {address} ({chain}): {error}"
+        },
+        "task": {
+          "description": "Fetch detected tokens for {address} ({chain})",
+          "title": "Fetch detected tokens"
+        }
+      },
+      "exchange_balances": {
+        "error": {
+          "message": "Failed to query {location} balances: {error}",
+          "title": "{location} balance query"
+        },
+        "task": {
+          "title": "Retrieving {location} balances"
+        }
+      },
+      "exchange_rates": {
+        "error": {
+          "message": "Failed fetching exchange rates: {message}",
+          "title": "Exchange Rates"
+        },
+        "task": {
+          "title": "Exchange Rates"
+        }
+      },
+      "exchange_removal": {
+        "description": "The removal of {exchange} failed due to: {error}",
+        "title": "Exchange removal"
+      },
+      "exchange_savings_interest": {
+        "error": {
+          "message": "Failed to query {location} savings interest information: {error}",
+          "title": "{location} savings interest information query"
+        },
+        "task": {
+          "title": "Retrieving {location} savings interest information"
+        }
+      },
+      "exchange_setup": {
+        "description": "The setup of {exchange} failed due to: {error}",
+        "title": "Exchange setup"
+      },
+      "historic_fetch_price": {
+        "error": {
+          "message": "Failed to fetch historic prices: {message}"
+        },
+        "task": {
+          "description": "Fetching rate from {fromAsset} to {toAsset} on {date} | Fetching rates for {count} pairs to {toAsset}",
+          "title": "Fetching conversion rate"
+        }
+      },
+      "loopring": {
+        "error": {
+          "description": "Querying Loopring balances failed: {error}",
+          "title": "Querying Loopring balances"
+        },
+        "task": {
+          "title": "Querying Loopring balances"
+        }
+      },
+      "manual_balances": {
+        "error": {
+          "message": "Failed: {message}",
+          "title": "Retrieving manual balances"
+        }
+      },
+      "manual_delete": {
+        "error": {
+          "title": "Deleting Manual Balance"
+        }
+      },
+      "xpub_removal": {
+        "error": {
+          "description": "Failed to remove {xpub}: {error}",
+          "title": "Xpub Removal"
+        },
+        "task": {
+          "description": "{xpub}",
+          "title": "Removing xpub"
+        }
+      }
+    },
+    "fetch_counterparties": {
+      "error": {
+        "title": "Counterparties",
+        "description": "Failed to fetch the counterparties: {message}"
+      },
+      "actions": {
+        "fetch_again": "Fetch again"
+      }
+    },
+    "defi": {
+      "aave_balances": {
+        "error": {
+          "description": "Failed to retrieve Aave balances: {error}",
+          "title": "Aave balances"
+        },
+        "task": {
+          "title": "Querying Aave balances"
+        }
+      },
+      "aave_history": {
+        "error": {
+          "description": "Failed to retrieve Aave history: {error}",
+          "title": "Aave history"
+        },
+        "task": {
+          "title": "Querying Aave history"
+        }
+      },
+      "airdrops": {
+        "error": {
+          "description": "Failed to retrieve airdrops: {error}",
+          "title": "Airdrops"
+        },
+        "task": {
+          "title": "Querying airdrops"
+        }
+      },
+      "balancer_balances": {
+        "error": {
+          "description": "Failed to query Balancer balances: {message}",
+          "title": "Querying Balancer balances"
+        },
+        "task": {
+          "title": "Querying Balancer balances"
+        }
+      },
+      "balances": {
+        "error": {
+          "description": "Failed to retrieve DeFi balances: {error}",
+          "title": "DeFi Balances"
+        },
+        "task": {
+          "title": "Querying DeFi balances"
+        }
+      },
+      "compound": {
+        "error": {
+          "description": "Failed to retrieve Compound balances: {error}",
+          "title": "Compound Balances"
+        },
+        "task": {
+          "title": "Querying Compound balances"
+        }
+      },
+      "compound_history": {
+        "error": {
+          "description": "Failed to retrieve Compound history: {error}",
+          "title": "Compound History"
+        },
+        "task": {
+          "title": "Querying Compound history"
+        }
+      },
+      "dsr_balances": {
+        "error": {
+          "description": "Failed to retrieve DSR balances: {error}",
+          "title": "DSR Balances"
+        },
+        "task": {
+          "title": "Querying DSR Balances"
+        }
+      },
+      "dsr_history": {
+        "error": {
+          "description": "Failed to retrieve DSR history: {error}",
+          "title": "DSR History"
+        },
+        "task": {
+          "title": "Querying DSR History"
+        }
+      },
+      "liquity": {
+        "task": {
+          "title": "Querying Liquity Balances"
+        }
+      },
+      "liquity_balances": {
+        "error": {
+          "description": "Failed to retrieve Liquity balances: {message}",
+          "title": "Liquity Balances"
+        }
+      },
+      "liquity_pools": {
+        "error": {
+          "description": "Failed to query Liquity Pools: {message}",
+          "title": "Liquity Pools"
+        },
+        "task": {
+          "title": "Querying Liquity Pools"
+        }
+      },
+      "liquity_staking": {
+        "error": {
+          "description": "Failed to retrieve Liquity staking: {message}",
+          "title": "Liquity staking"
+        },
+        "task": {
+          "title": "Querying Liquity staking"
+        }
+      },
+      "liquity_statistics": {
+        "error": {
+          "description": "Failed to query Liquity statistics: {message}",
+          "title": "Liquity Statistics"
+        },
+        "task": {
+          "title": "Querying Liquity Statistics"
+        }
+      },
+      "makerdao_vault_details": {
+        "error": {
+          "description": "Failed to retrieve MakerDAO Vault details: {error}",
+          "title": "MakerDAO Vault details"
+        },
+        "task": {
+          "title": "Querying MakerDAO Vault details"
+        }
+      },
+      "makerdao_vaults": {
+        "error": {
+          "description": "Failed to retrieve MakerDAO Vaults: {error}",
+          "title": "MakerDAO Vaults"
+        },
+        "task": {
+          "title": "Querying MakerDAO Vaults"
+        }
+      },
+      "sushiswap_balances": {
+        "error": {
+          "description": "Failed to query Sushiswap balances: {message}",
+          "title": "Sushiswap balances"
+        },
+        "task": {
+          "title": "Querying Sushiswap balances"
+        }
+      },
+      "sushiswap_events": {
+        "error": {
+          "description": "Failed to query Sushiswap events: {message}",
+          "title": "Sushiswap events"
+        },
+        "task": {
+          "title": "Querying Sushiswap events"
+        }
+      },
+      "uniswap": {
+        "error": {
+          "description": "Failed to retrieve Uniswap V{v} balances: {error}",
+          "title": "Uniswap V{v} balances"
+        },
+        "task": {
+          "title": "Querying Uniswap V{v} balances"
+        }
+      },
+      "uniswap_events": {
+        "error": {
+          "description": "Failed to retrieve Uniswap events: {error}",
+          "title": "Querying Uniswap events"
+        },
+        "task": {
+          "title": "Querying Uniswap events"
+        }
+      },
+      "yearn_vaults": {
+        "error": {
+          "description": "Failed to retrieve yearn.finance Vaults {version} balances: {error}",
+          "title": "yearn.finance Vaults {version} balances"
+        },
+        "task": {
+          "title": "Querying yearn.finance Vaults {version} balances"
+        }
+      }
+    },
+    "delete_eth2_validator": {
+      "error": {
+        "description": "Deleting the ETH staking validators failed: {message}",
+        "title": "Deleting ETH staking validators"
+      }
+    },
+    "detect_evm_accounts": {
+      "error": {
+        "message": "Failed to detect EVM accounts with the following error: {message}",
+        "title": "Detecting EVM accounts"
+      },
+      "task": {
+        "title": "Detecting EVM accounts"
+      }
+    },
+    "edit_eth2_validator": {
+      "error": {
+        "description": "There was an error while editing the ETH staking validator {id}: {message}",
+        "title": "Editing ETH staking validator"
+      }
+    },
+    "eth2_staking_stats": {
+      "error": {
+        "message": "Query failed with the following error: {message}",
+        "title": "Querying ETH staking daily stats"
+      },
+      "task": {
+        "description": "Querying your ETH staking daily stats",
+        "title": "ETH staking daily stats"
+      }
+    },
+    "get_accounts": {
+      "error": {
+        "description": "Failed to query accounts for {blockchain}: {message}",
+        "title": "Querying of accounts"
+      }
+    },
+    "history": {
+      "fetch_associated_locations": {
+        "error": {
+          "message": "Failed to retrieve the associated locations: {message}",
+          "title": "Fetch associated locations"
+        }
+      },
+      "fetch_undecoded_transactions": {
+        "error": {
+          "message": "Failed to query breakdown for EVM undecoded transactions: {message}"
+        },
+        "task": {
+          "title": "Retrieving breakdown for EVM undecoded transactions."
+        }
+      }
+    },
+    "history_events": {
+      "error": {
+        "description": "Failed to query history events: {error}",
+        "title": "History Events Query"
+      },
+      "missing_rule": {
+        "title": "Event missing accounting rule",
+        "message": "This event will not be processed in accounting. To handle it, you must choose one of these options:",
+        "re_decode": "Redecode event",
+        "edit": "Edit event",
+        "add_rule": "Add missing accounting rule"
+      },
+      "fetch_mapping": {
+        "error": {
+          "title": "History events mapping",
+          "description": "Failed to fetch history events mapping: {message}"
+        },
+        "actions": {
+          "fetch_again": "Fetch again"
+        }
+      }
+    },
+    "history_events_export": {
+      "message": {
+        "failure": "History events export failed: {description}",
+        "success": "History events exported to CSV successfully"
+      },
+      "title": "History Events Export"
+    },
+    "ignore": {
+      "error": {
+        "description": "Failed to ignore the selected actions: {error}",
+        "title": "Ignoring actions failed"
+      }
+    },
+    "kraken_staking": {
+      "error": {
+        "message": "There was an error while querying the kraken staking events: {message}",
+        "title": "Querying Kraken staking events"
+      },
+      "task": {
+        "title": "Querying Kraken staking events"
+      }
+    },
+    "manual_balances": {
+      "add": {
+        "error": {
+          "description": "Failed to add manual balance: {message}"
+        },
+        "task": {
+          "title": "Adding manual balances"
+        }
+      },
+      "edit": {
+        "error": {
+          "description": "Failed to edit manual balance: {message}"
+        },
+        "task": {
+          "title": "Editing manual balances"
+        }
+      },
+      "fetch": {
+        "task": {
+          "title": "Retrieving manual balances"
+        }
+      }
+    },
+    "nft_balances": {
+      "error": {
+        "message": "An error occurred while querying the NFT balances: {message}",
+        "title": "NFT balance querying"
+      },
+      "task": {
+        "title": "Querying NFT balances"
+      }
+    },
+    "notifications": {
+      "consume": {
+        "message_title": "Backend messages"
+      }
+    },
+    "online_events": {
+      "error": {
+        "description": "Failed query online events with query type {queryType}: {error}",
+        "title": "Online Events Query"
+      },
+      "task": {
+        "description": "Requesting new {queryType} events",
+        "title": "Querying events"
+      },
+      "skipped": {
+        "csv_export": {
+          "message": {
+            "failure": "Skipped events export failed",
+            "success": "Skipped events exported to CSV successfully"
+          },
+          "title": "CSV Export"
+        }
+      }
+    },
+    "reports": {
+      "csv_export": {
+        "message": {
+          "failure": "History export failed",
+          "success": "History exported to CSV successfully"
+        },
+        "title": "CSV Export"
+      },
+      "delete": {
+        "error": {
+          "description": "An unexpected response was received while deleting report history. This might indicate an issue with the reporting mechanism. Please check the logs for any error messages (you might have to enable debug logging first) and create an issue.",
+          "title": "An error has occurred deleting the report(s)."
+        }
+      },
+      "fetch": {
+        "error": {
+          "description": "An unexpected response was received while fetching report history. This might indicate an issue with the reporting mechanism. Please check the logs for any error messages (you might have to enable debug logging first) and create an issue.",
+          "title": "An error has occurred retrieving the processed report(s)."
+        }
+      },
+      "generate": {
+        "error": {
+          "description": "An unexpected response was received while generating the profit and loss report. This might indicate an issue with the generation mechanism. Please check the logs for any error messages (you might have to enable debug logging first) and create an issue."
+        },
+        "task": {
+          "title": "Create tax report"
+        }
+      }
+    },
+    "session": {
+      "add_queriable_address": {
+        "error": {
+          "message": "Failure to add a queriable address: {message}"
+        }
+      },
+      "delete_queriable_address": {
+        "error": {
+          "message": "Failure to delete a queriable address: {message}"
+        }
+      },
+      "fetch_nfts": {
+        "task": {
+          "title": "Querying NFTs"
+        }
+      },
+      "fetch_prices": {
+        "error": {
+          "message": "Failed to fetch prices: {error}",
+          "title": "Fetching prices"
+        },
+        "task": {
+          "title": "Fetching prices"
+        }
+      },
+      "fetch_queriable_address": {
+        "error": {
+          "message": "Failure to fetch the queriable addresses: {message}"
+        }
+      },
+      "fetch_watchers": {
+        "error": {
+          "message": "Error: {message}",
+          "title": "Fetching watchers"
+        }
+      },
+      "force_sync": {
+        "error": {
+          "message": "There was an error while performing the sync: {error}",
+          "title": "Forced Sync"
+        },
+        "success": {
+          "message": "The data sync operation was completed successfully.",
+          "title": "Forced sync"
+        },
+        "task": {
+          "title": "Forced Sync"
+        }
+      },
+      "ignored_assets": {
+        "error": {
+          "message": "Failed to retrieve ignored assets: {error}",
+          "title": "Querying ignored assets"
+        }
+      },
+      "kraken_account": {
+        "error": {
+          "title": "Error setting kraken account type"
+        },
+        "success": {
+          "message": "Successfully set kraken account type",
+          "title": "Success"
+        }
+      },
+      "password_change": {
+        "error": "Error while changing the user password: {message}",
+        "success": "Successfully changed user password"
+      },
+      "periodic_query": {
+        "error": {
+          "message": "Error at periodic client query: {message}",
+          "title": "Periodic client query"
+        }
+      },
+      "refresh_general_cache": {
+        "error": {
+          "message": "Failed to refresh general cache: {message}"
+        },
+        "task": {
+          "title": "Refresh general cache (Curve, MakerDAO, Yearn)"
+        }
+      },
+      "tag_add": {
+        "error": {
+          "title": "Adding tag"
+        }
+      },
+      "tag_delete": {
+        "error": {
+          "title": "Deleting tag"
+        }
+      },
+      "tag_edit": {
+        "error": {
+          "title": "Editing tag"
+        }
+      },
+      "whitelisted_assets": {
+        "error": {
+          "message": "Failed to retrieve whitelisted assets: {error}",
+          "title": "Querying whitelisted assets"
+        }
+      }
+    },
+    "staking": {
+      "eth2": {
+        "error": {
+          "description": "Failed to query the ETH staking details: {error}",
+          "title": "Querying the ETH staking details"
+        },
+        "task": {
+          "title": "Querying ETH staking details"
+        }
+      }
+    },
+    "statistics": {
+      "net_value": {
+        "error": {
+          "message": "Failed: {message}",
+          "title": "Retrieving net value data"
+        }
+      }
+    },
+    "trades": {
+      "error": {
+        "description": "Failed query for {exchange}: {error}",
+        "title": "Trades for {exchange}"
+      },
+      "task": {
+        "description": "Retrieving trades for {exchange}",
+        "title": "Trades"
+      }
+    },
+    "transactions": {
+      "error": {
+        "description": "Failed query for {address} ({chain}): {error}",
+        "title": "Evm Transactions Query"
+      },
+      "task": {
+        "description": "Retrieving txns for {address} ({chain})",
+        "title": "Evm Transactions"
+      }
+    },
+    "transactions_redecode": {
+      "error": {
+        "description": "Failed to decode events from transactions: {error}",
+        "title": "Decoding events from transactions"
+      },
+      "task": {
+        "description": "Decoding transaction events for transactions: {tx} ({chain})",
+        "title": "Decoding transaction events"
+      }
+    },
+    "transactions_redecode_by_chain": {
+      "error": {
+        "description": "Failed to decode {chain} events: {error}",
+        "title": "Decoding events from transactions"
+      },
+      "task": {
+        "description": "Decoding transactions for {chain} events",
+        "title": "Decoding transaction events"
+      }
+    },
+    "unignore": {
+      "error": {
+        "description": "Failed to unignore the selected actions: {error}",
+        "title": "Unignoring actions failed"
+      }
+    }
+  },
+  "active_modules": {
+    "activate": "Activate the {name} module",
+    "enable": {
+      "description": "Would you like to enable the {name} module?",
+      "title": "Enabled module"
+    },
+    "view_addresses": "View the queried addresses for {name}"
+  },
+  "address_account_form": {
+    "hint": "When checked this address will be tracked for all supported evm chains (Ethereum, Optimism etc)",
+    "label": "Add to all supported EVM chains"
+  },
+  "address_book": {
+    "actions": {
+      "add": {
+        "error": {
+          "description": "Adding to the address book was not successful: {message}",
+          "title": "Address book addition failed"
+        }
+      },
+      "delete": {
+        "dialog": {
+          "message": "Are you sure you want to delete address book entry for {address} ({chain})?",
+          "title": "Delete the address book entry"
+        },
+        "error": {
+          "description": "Deleting address book for {address} ({chain}) was not successful: {message}",
+          "title": "Address book deletion failed"
+        },
+        "tooltip": "Delete the address book"
+      },
+      "edit": {
+        "error": {
+          "description": "Editing address book was not successful: {message}",
+          "title": "Address book edit failed"
+        },
+        "tooltip": "Edit the address book"
+      },
+      "fetch": {
+        "error": {
+          "message": "Failed to retrieve the address book: {message}",
+          "title": "Querying address book"
+        }
+      }
+    },
+    "dialog": {
+      "add_title": "Add address book entry",
+      "edit_title": "Edit address book entry"
+    },
+    "form": {
+      "labels": {
+        "address": "Address",
+        "for_all_chain": "Save this name for all chains"
+      },
+      "no_suggestions_available": "No Suggestions Available",
+      "validation": {
+        "address": "The address field cannot be empty",
+        "chain": "The blockchain field cannot be empty",
+        "name": "The name field cannot be empty"
+      }
+    },
+    "hint": {
+      "global": "Global",
+      "global_description": "address book is saved in global db (shared across all accounts in this device)",
+      "priority": {
+        "list": {
+          "blockchain_account_labels": "Blockchain account labels",
+          "ens_names": "ENS names",
+          "ethereum_tokens": "Ethereum tokens",
+          "global_address_book": "Global address book",
+          "hardcoded_mappings": "Hardcoded mappings",
+          "private_address_book": "Private address book"
+        },
+        "title": "The priority of the returned names adheres to the following order. From top to bottom, the first name found will be shown."
+      },
+      "private": "Private",
+      "private_description": "address book is saved only for this account."
+    }
+  },
+  "address_name_priority_setting": {
+    "data_name": "priority"
+  },
+  "airdrops": {
+    "headers": {
+      "source": "Source"
+    },
+    "title": "Airdrops",
+    "unknown_info": "Airdrops are available for these addresses, but we can't yet analyze if it has been claimed or not.",
+    "unknown_tooltip": "Address is eligible for this airdrop, but we can't yet analyze if it has been claimed or not."
+  },
+  "alias_names": {
+    "error": {
+      "message": "Failed to retrieve the alias names: {message}",
+      "title": "Querying alias names"
+    }
+  },
+  "amount_display": {
+    "abbreviation": {
+      "k": "thousands",
+      "m": "millions",
+      "b": "billions",
+      "t": "trillions"
+    },
+    "click_to_copy": "Click to copy",
+    "copied": "Copied!",
+    "manual_tooltip": "Manually defined price"
+  },
+  "app": {
+    "copyright": "© Rotki Solutions GmbH 2018-{year}",
+    "moto": "the opensource portfolio manager that protects your privacy",
+    "name": "rotki"
+  },
+  "asset_balances": {
+    "loading": "Please wait while rotki queries the balances..."
+  },
+  "asset_form": {
+    "add_error": "Couldn't save asset",
+    "edit_error": "Couldn't edit asset",
+    "fetch_latest_icon": {
+      "description": "Failed to fetch the latest icon for {identifier}: {message}",
+      "title": "Fetch the latest icon"
+    },
+    "help_coingecko": "Click for help on how to locate the CoinGecko identifier",
+    "help_cryptocompare": "Click for help on how to locate the CryptoCompare identifier",
+    "icon_upload": {
+      "description": "The icon upload failed: {message}",
+      "title": "Icon upload"
+    },
+    "identifier": "Identifier",
+    "identifier_copy": "Copy the identifier",
+    "labels": {
+      "asset_type": "Asset Type",
+      "chain": "Chain",
+      "coingecko": "CoinGecko",
+      "coingecko_hint": "The identifier of the asset on CoinGecko. If not set rotki will not be able to retrieve prices for the asset from CoinGecko.",
+      "cryptocompare": "CryptoCompare",
+      "cryptocompare_hint": "The identifier of the asset on CryptoCompare. If not given, the symbol is assumed as default. If that does not work and if not otherwise set rotki will not be able to retrieve prices for the asset from CryptoCompare",
+      "decimals": "Decimals",
+      "forked": "Forked",
+      "started": "Started",
+      "swapped_for": "Swapped for",
+      "symbol": "Symbol",
+      "token_kind": "Token Kind"
+    },
+    "name_non_empty": "The name of the asset cannot be empty",
+    "optional": "Optional Fields",
+    "oracle_disable": "Disable/Enable the price fetching from the price oracle. If the oracle is not disabled, and there is no value specified, rotki will attempt to fetch a price using the asset symbol.",
+    "replaced": "This icon will be applied after you click \"Save\".",
+    "type_non_empty": "The type of the asset cannot be empty",
+    "types": {
+      "error": "We could not load the asset types: {message}"
+    },
+    "underlying_tokens": "Underlying tokens",
+    "validation": {
+      "valid_address": "Please input valid ETH address"
+    }
+  },
+  "asset_icon": {
+    "tooltip": "[{symbol}] {name}"
+  },
+  "asset_locations": {
+    "header": {
+      "percentage": "Percentage",
+      "validator": "Validator Index | Public Key",
+      "value": "{symbol} value"
+    },
+    "title": "Asset Locations"
+  },
+  "asset_management": {
+    "add_error": "Could not add asset: {message}",
+    "add_title": "Add a new asset",
+    "cex_mapping": {
+      "add_error": "Could not add the mapping: {message}",
+      "add_mapping": "Add Mapping",
+      "add_title": "Add a new mapping",
+      "all_exchanges": "All exchanges",
+      "confirm_delete": {
+        "message": "Are you sure you want to delete the asset mapping for the symbol {asset} in {location}?",
+        "title": "Delete Exchange Asset Mapping"
+      },
+      "delete_error": "Could not delete the mapping: {message}",
+      "edit_error": "Could not edit the mapping: {message}",
+      "edit_title": "Edit the mapping",
+      "exchange": "Exchange",
+      "filter_by_exchange": "Filter by exchange",
+      "form": {
+        "asset_non_empty": "The recognized asset field cannot be empty",
+        "location_non_empty": "The location field cannot be empty",
+        "location_symbol_non_empty": "The asset symbol field cannot be empty"
+      },
+      "location_symbol": "Asset symbol",
+      "filter_by_location_symbol": "Filter by asset symbol",
+      "recognized_as": "Recognized as",
+      "save_for_all": "Save this mapping for all exchange",
+      "subtitle": "You can link asset symbols on a centralized exchange with assets recognized by rotki. This is necessary for rotki to process assets on the exchanges."
+    },
+    "confirm_delete": {
+      "message": "Are you sure you want to delete {asset} from the asset database?",
+      "title": "Delete asset"
+    },
+    "delete_error": "Could not delete {address}: {message}",
+    "edit_error": "Could not edit asset: {message}",
+    "edit_title": "Edit an asset",
+    "merge_assets": "Merge Assets",
+    "merge_assets_tooltip": "Merge two assets into one (can be used to migrate custom assets to officially supported ones)"
+  },
+  "asset_search": {
+    "error": {
+      "title": "Asset search",
+      "message": "Failed to search asset: {message}"
+    }
+  },
+  "asset_select": {
+    "no_results": "No assets matching your search"
+  },
+  "asset_table": {
+    "copy_identifier": {
+      "tooltip": "Copy the asset identifier to clipboard"
+    },
+    "custom": {
+      "subtitle": "Add, edit, remove custom assets. Changes in the assets will be reflected across all your accounts"
+    },
+    "delete_tooltip": "Delete the asset",
+    "edit_tooltip": "Edit the asset",
+    "filter_by_ignored_status": "Filter by ignored status",
+    "headers": {
+      "started": "Started"
+    },
+    "newly_detected": {
+      "accept": "Accept token",
+      "accept_selected": "Accept selected tokens",
+      "mark_as_spam": "Mark token as spam",
+      "mark_selected_as_spam": "Mark selected tokens as spam",
+      "seen_during": "Seen during",
+      "select_deselect_all_tokens": "Select/deselect all tokens",
+      "subtitle": "Inspect the list of newly detected tokens and add any assets to the spam tokens list"
+    },
+    "only_show_ignored": "Only show ignored assets ({length}) | Only show ignored assets",
+    "only_show_owned": "Only show owned assets",
+    "only_show_unignored": "Only show un-ignored assets",
+    "only_show_whitelisted": "Only show whitelisted assets",
+    "selected": "{count} asset(s) selected",
+    "show_all": "Show all",
+    "underlying_tokens": "Underlying Tokens"
+  },
+  "asset_update": {
+    "advanced": "Advanced",
+    "description": "Version {remote} of the asset database is available. Would you like to update from version {local}?",
+    "manual": {
+      "check": "Check For Update",
+      "skipped": "Update notifications are disabled for version {skipped}",
+      "subtitle": "Perform a check for an updated version of the asset database",
+      "title": "Check for asset db updates"
+    },
+    "partially_update": "Partially update",
+    "restore": {
+      "delete_confirmation": {
+        "hard_reset_message": "Do you really want to reset your local copy of assets? You will lose any custom assets that you may have added manually.",
+        "soft_reset_message": "Do you really want to restore your local assets database? This will keep the assets that you manually added and were not known to rotki before and reset all others to their original state.",
+        "title": "Reset assets database"
+      },
+      "hard_reset": "Hard Reset",
+      "hard_reset_hint": "This option will also reset assets that were added by the user.",
+      "hard_restore_confirmation": {
+        "message": "There are assets that will be deleted and might cause an inconsistent state in this account or other accounts in the system. Confirm this action only if you know what you are doing.",
+        "title": "Dangerous operation"
+      },
+      "soft_reset": "Soft Reset",
+      "soft_reset_hint": "This option will not reset assets that were added by the user.",
+      "subtitle": "Delete custom assets and reset assets database to its initial state. Caution: This operation might affect other users in the same system using the database for assets.",
+      "success": {
+        "description": "The asset database has been successfully restored. You will now need to re-login to apply the changes.",
+        "title": "Asset database restore"
+      },
+      "title": "Reset assets database"
+    },
+    "skip_notification": "Don't notify me until the next update",
+    "success": {
+      "description": "The asset database has been successfully updated to version {remoteVersion}. You will now need to re-login to apply the changes",
+      "title": "Asset database update"
+    },
+    "title": "A supported asset update is available",
+    "total_changes": "This update contains {changes} asset changes.",
+    "up_to_date": "Your asset database is up to date.",
+    "up_to_version": "Only update up to version"
+  },
+  "asset_update_status": {
+    "applying": {
+      "message": "Please wait while your asset data are updated to version {remoteVersion}",
+      "title": "Applying asset update"
+    },
+    "checking": {
+      "message": "Please wait while a check for an asset update is performed",
+      "title": "Checking for updated assets"
+    }
+  },
+  "assets": {
+    "amount": "Total Owned",
+    "backup": {
+      "missing_directory": "Please select a directory"
+    },
+    "custom_price": {
+      "delete": {
+        "error": {
+          "message": "Could not delete the latest price for {asset}",
+          "title": "Deleting custom latest price"
+        },
+        "message": "Are you sure you want to delete the custom price for {asset}?",
+        "tooltip": "Delete the custom price"
+      },
+      "edit": {
+        "tooltip": "Edit or set the custom price"
+      }
+    },
+    "filter": {
+      "address": "Filter by the address",
+      "chain": "Filter by evm chain",
+      "name": "Filter by the name of the asset",
+      "name_hint": "Search using the asset name",
+      "symbol": "Filter by the symbol of the asset",
+      "symbol_hint": "Search using the asset symbol",
+      "type": "Filter by the type of the custom asset",
+      "type_hint": "Search using the asset type"
+    },
+    "ignore": "Ignore Asset",
+    "multi_chain_assets": "Multi Chain Assets",
+    "value": "Value"
+  },
+  "back_button": {
+    "tooltip": "Navigate back to the previous page."
+  },
+  "backend_mappings": {
+    "exchanges": {
+      "kraken": {
+        "type": {
+          "starter": "Starter / Express",
+          "intermediate": "Intermediate",
+          "pro": "Pro"
+        }
+      }
+    },
+    "events": {
+      "history_event_subtype": {
+        "airdrop": "Airdrop",
+        "approve": "Approve",
+        "bridge": "Bridge",
+        "deploy": "Deploy",
+        "deposit_asset": "Deposit Asset",
+        "donate": "Donate",
+        "fee": "Fee",
+        "generate_debt": "Generate Debt",
+        "governance": "Governance",
+        "liquidate": "Liquidate",
+        "nft": "NFT",
+        "none": "None",
+        "payback_debt": "Payback Debt",
+        "place_order": "Place Order",
+        "receive": "Receive",
+        "receive_wrapped": "Receive Wrapped",
+        "remove_asset": "Remove Asset",
+        "return_wrapped": "Return Wrapped",
+        "reward": "Reward",
+        "spend": "Spend"
+      },
+      "history_event_type": {
+        "adjustment": "Adjustment",
+        "deposit": "Deposit",
+        "informational": "Informational",
+        "migrate": "Migrate",
+        "receive": "Receive",
+        "renew": "Renew",
+        "spend": "Spend",
+        "staking": "Staking",
+        "trade": "Trade",
+        "transfer": "Transfer",
+        "unknown": "Unknown",
+        "withdrawal": "Withdrawal"
+      },
+      "type": {
+        "airdrop": "Airdrop",
+        "approval": "Approval",
+        "borrow": "Borrow",
+        "bridge": "Bridge",
+        "cancel_order": "Cancel Order",
+        "claim_reward": "Claim Reward",
+        "deploy": "Deploy",
+        "deposit": "Deposit",
+        "donate": "Donate",
+        "fee": "Fee",
+        "gas_fee": "Gas Fee",
+        "governance": "Governance",
+        "informational": "Informational",
+        "liquidate": "Liquidate",
+        "place_order": "Place Order",
+        "receive": "Receive",
+        "receive_donation": "Receive Donation",
+        "refund": "Refund",
+        "renew": "Renew",
+        "repay": "Repay",
+        "send": "Send",
+        "swap_in": "Receive",
+        "swap_out": "Swap",
+        "transfer": "Transfer",
+        "unknown": "Unknown",
+        "withdraw": "Withdraw"
+      },
+      "type_direction": {
+        "title": "Direction of the asset movement:\n{direction}",
+        "directions": {
+          "in": "to the user",
+          "out": "from the user",
+          "neutral": "neutral"
+        }
+      }
+    },
+    "profit_loss_event_type": {
+      "asset_movement": "Asset Movement",
+      "fee": "Fee",
+      "history_base_entry": "History Base Entry",
+      "loan": "Loan",
+      "margin_position": "Margin Position",
+      "prefork_acquisition": "Prefork Acquisition",
+      "staking": "Staking",
+      "trade": "Trade",
+      "transaction_event": "Transaction Event"
+    },
+    "trade_location": {
+      "banks": "Banks",
+      "commodities": "Commodities",
+      "equities": "Equities",
+      "external": "External",
+      "real_estate": "Real Estate"
+    }
+  },
+  "backend_settings": {
+    "actions": {
+      "reset": "Reset to default"
+    },
+    "advanced": "Advanced",
+    "config_file_disabled": "This parameter is already set in the rotki_config.json",
+    "confirm": {
+      "message": "Are you sure you want to rest the backend settings to default?",
+      "title": "Rest backend settings"
+    },
+    "data_directory": {
+      "select": "Select where rotki will store the data"
+    },
+    "errors": {
+      "min": "Minimum value for this setting is {min}",
+      "non_empty": "This setting cannot be empty"
+    },
+    "log_directory": {
+      "select": "Select where rotki will store the logs"
+    },
+    "log_from_other_modules": {
+      "hint": "Enables logging from third party libraries (useful for debugging)",
+      "label": "Log from other modules"
+    },
+    "max_log_files": {
+      "hint": "This is the maximum number of logfiles to keep",
+      "label": "Max num of log files"
+    },
+    "max_log_size": {
+      "hint": "This is the maximum size in megabytes that will be used for all rotki logs",
+      "label": "Max log size"
+    },
+    "settings": {
+      "data_directory": {
+        "hint": "By changing the data directory, data in the old directory will have to be manually moved to the new one.",
+        "label": "Data Directory"
+      },
+      "log_directory": {
+        "label": "Log Directory"
+      },
+      "log_level": {
+        "label": "Log Level"
+      }
+    },
+    "sqlite_instructions": {
+      "hint": "Specify after how many sqlite VM instructions to context switch between cooperative threads. Set to 0 to disable async DB access",
+      "label": "Instructions per SQLite context switch"
+    },
+    "subtitle": "Modify the backend settings",
+    "title": "Backend Settings"
+  },
+  "backend_settings_button": {
+    "tooltip": "Change the backend settings. Changing the settings will restart the rotki backend"
+  },
+  "backup_manager": {
+    "backup_button": "Create new Backup",
+    "delete_selected": "Delete selected Backups",
+    "title": "User Database Backups"
+  },
+  "balancer": {
+    "loading": "Please wait while your liquidity pools are getting loaded...",
+    "premium": "Balancer feature "
+  },
+  "binance_market_selector": {
+    "default_label": "Filter market pair(s)",
+    "query_all": {
+      "error": "Couldn't get the list of markets for binance.",
+      "title": "Query Binance markets"
+    },
+    "query_user": {
+      "error": "Couldn't get the list of markets selected to be queried for binance.",
+      "title": "Query selected Binance markets"
+    }
+  },
+  "blockchain_account_selector": {
+    "all": "all",
+    "default_label": "Filter account(s)",
+    "hint": "Showing results across {hintText} accounts.",
+    "no_data": "No more usable addresses"
+  },
+  "blockchain_balances": {
+    "validators": "Ethereum Validators",
+    "add_account": "Add Account",
+    "evm_detection": {
+      "title": "Detect EVM accounts",
+      "tooltip": "Detect activities of all registered EVM accounts in other EVM chains, and register them."
+    },
+    "form_dialog": {
+      "add_title": "Add blockchain account",
+      "edit_subtitle": "Modify account details",
+      "edit_title": "Edit blockchain account"
+    },
+    "per_asset": {
+      "title": "Blockchain Balances per Asset"
+    },
+    "title": "Blockchain Balances per asset",
+    "unify_accounts_table": "Unify accounts table"
+  },
+  "borrowing": {
+    "header": "Collateralized Loans",
+    "loading": "Please wait while your liabilities are getting loaded...",
+    "select_loan": "Select Loan",
+    "select_loan_hint": "Please select a loan to see information",
+    "total_collateral_locked": "Total collateral locked",
+    "total_outstanding_debt": "Total outstanding debt"
+  },
+  "calendar": {
+    "add_error": "Could not add event: {message}",
+    "add_event": "Add Event",
+    "dialog": {
+      "add": {
+        "title": "Add an event"
+      },
+      "edit": {
+        "title": "Edit the event"
+      },
+      "settings": {
+        "title": "Calendar Settings",
+        "tooltip": "Open Calendar Settings",
+        "auto_delete": "Auto delete past events for automatic events",
+        "auto_delete_entry": "Delete event once it has passed",
+        "auto_create_reminders": "Create reminders for automatic events"
+      },
+      "delete": {
+        "message": "Are you sure you want to delete the event?"
+      }
+    },
+    "delete_error": {
+      "message": "Failed to delete event: {message}"
+    },
+    "delete_event": "Delete event",
+    "edit_error": "Could not edit event: {message}",
+    "form": {
+      "name": {
+        "validation": {
+          "non_empty": "The name field cannot be empty."
+        }
+      }
+    },
+    "go_to_date": "Go to date",
+    "more_events": "{hidden} more",
+    "no_events": "No events",
+    "reminder": {
+      "add_reminder": "Add Reminder",
+      "add_error": {
+        "title": "Adding calendar reminder",
+        "message": "There was a problem adding the reminder: {message}",
+        "some_failed": "There was some problem when adding the reminder for calendar event with id: {ids}"
+      },
+      "before_event": "before event",
+      "delete_error": {
+        "title": "Deleting calendar reminder",
+        "message": "There was a problem deleting the reminder: {message}"
+      },
+      "edit_error": {
+        "title": "Editing calendar reminder",
+        "message": "There was a problem editing the reminder: {message}"
+      },
+      "fetch_error": {
+        "title": "Fetching calendar reminder",
+        "message": "There was a problem fetching the reminder: {message}"
+      },
+      "notify": "Notify me at event time",
+      "title": "Reminder",
+      "units": {
+        "days": "Days",
+        "hours": "Hours",
+        "minutes": "Minutes",
+        "weeks": "Weeks"
+      },
+      "validation": {
+        "amount": {
+          "min_value": "Cannot set reminder less than 1 minute",
+          "max_value": "Cannot set reminder more than {amount} {unit}",
+          "non_empty": "The amount field should not be empty"
+        },
+        "unit": {
+          "non_empty": "The unit field should not be empty"
+        }
+      }
+    },
+    "today": "Today",
+    "today_events": "Today Events",
+    "view_details": "View Details"
+  },
+  "change_password": {
+    "button": "Change Password",
+    "labels": {
+      "confirm_password": "Confirm New Password",
+      "new_password": "New Password",
+      "password": "Current Password"
+    },
+    "sync_warning": "Changing the password with premium sync enabled will affect other synced instances of the application. Upon login with other synced instances, you will be asked to overwrite the local DB with the synced version on the server. After that, you must log in with the newly set password.",
+    "title": "User Account & Security",
+    "validation": {
+      "empty_confirmation": "Please provide a password confirmation",
+      "empty_password": "Please provide a password",
+      "password_mismatch": "The password confirmation does not match the provided password"
+    }
+  },
+  "closed_trades": {
+    "confirmation": {
+      "message": "Are you sure you want to delete the following trade: {action} of {amount} {pair}",
+      "multiple_message": "Are you sure you want to delete these {length} trades?",
+      "title": "Delete Trade"
+    },
+    "delete_tooltip": "Delete trade",
+    "description": {
+      "for": "for",
+      "with": "with"
+    },
+    "details": {
+      "fee": "Fee",
+      "link": "Link",
+      "title": "Trade Details"
+    },
+    "dialog": {
+      "add": {
+        "title": "Add an external trade"
+      },
+      "edit": {
+        "subtitle": "Edit an existing trade",
+        "title": "Edit External Trade"
+      }
+    },
+    "edit_tooltip": "Edit trade",
+    "filter": {
+      "base_asset": "filter by the base asset of the trade",
+      "date_hint": "format {format} HH:mm:ss (time/seconds are optional)",
+      "end_date": "filter by the end date of the trade period",
+      "location": "filter by the trade location",
+      "quote_asset": "filter by the quote asset of the trade",
+      "start_date": "filter by the start date of the trade period",
+      "trade_type": "filter by the trade action (buy or sell)"
+    },
+    "headers": {
+      "action": "Action",
+      "base": "Base",
+      "quote": "Quote",
+      "rate": "Rate"
+    },
+    "hide_ignored_trades": "Hide ignored trades",
+    "label": "trades",
+    "refresh_tooltip": "Refresh trades",
+    "selected": "{count} trade(s) selected",
+    "title": "Exchange Trades"
+  },
+  "collapsed_pending_tasks": {
+    "title": "{count} pending task | {count} pending tasks",
+    "cancel_task": "Cancel task",
+    "cancel_task_info": "This action will leave the running process ({title}) in an unfinished state, are you sure you want to cancel?"
+  },
+  "common": {
+    "entry_type": "Entry Type",
+    "account": "Account",
+    "actions": {
+      "add": "Add",
+      "back": "Back",
+      "cancel": "Cancel",
+      "clear_selection": "Clear Selection",
+      "close": "Close",
+      "confirm": "Confirm",
+      "continue": "Continue",
+      "copy": "Copy",
+      "copy_to_clipboard": "Copy to clipboard",
+      "create": "Create",
+      "delete": "Delete",
+      "dismiss": "Dismiss",
+      "download": "Download",
+      "download_csv": "Download CSV",
+      "edit": "Edit",
+      "export_csv": "Export CSV",
+      "filter": "Filter",
+      "finish": "Finish",
+      "generate": "Generate",
+      "import": "Import",
+      "install": "Install",
+      "next": "Next",
+      "no": "No",
+      "ok": "OK",
+      "pull": "Pull",
+      "proceed": "Proceed",
+      "push": "Push",
+      "save": "Save",
+      "save_continue": "Save & continue",
+      "search": "Search",
+      "skip": "Skip",
+      "terminate": "Terminate",
+      "update": "Update",
+      "yes": "Yes"
+    },
+    "actions_text": "Actions",
+    "address": "Address",
+    "amount": "Amount",
+    "asset": "Asset",
+    "assets": "Assets",
+    "available_to_premium": "only available to premium users.",
+    "balance": "Balance",
+    "category": "Category",
+    "chain": "Chains",
+    "claimed": "Claimed",
+    "counterparty": "Counterparty",
+    "datetime": "Date/Time",
+    "deposits": "Deposits",
+    "description": "Description",
+    "details": "Details",
+    "events": "Events",
+    "filter": {
+      "date_hint": "format {format} HH:mm:ss (time/seconds are optional)",
+      "end_date": "filter by the ending date of the period",
+      "start_date": "filter by the starting date of the period"
+    },
+    "here": "here",
+    "ignored_in_accounting": "Ignored in Accounting",
+    "important_notice": "Important notice:",
+    "label": "Label",
+    "location": "Location",
+    "missed": "Missed",
+    "multi_chain": "Multi Chain",
+    "name": "Name",
+    "never": "Never",
+    "no_premium": "No premium subscription detected. ",
+    "notes": "Notes",
+    "of": "of",
+    "optional": "Optional",
+    "or": "or",
+    "ownership": "Ownership",
+    "price": "Price",
+    "price_in_symbol": "Price in {symbol}",
+    "priority": "Priority",
+    "protocol": "Protocol",
+    "refresh": "Refresh",
+    "rewards": "Rewards",
+    "select_address": "Select address(es)",
+    "select_directory": "Select a directory",
+    "status": "Status",
+    "tags": "Tags",
+    "total": "Total",
+    "xpub": "XPUB",
+    "tx_hash": "Tx Hash",
+    "type": "Type",
+    "unclaimed": "Unclaimed",
+    "validator_index": "Validator Index",
+    "value_in_symbol": "{symbol} Value",
+    "visit_website": "To get a premium subscription please visit our {0}.",
+    "website": "website",
+    "unknown": "Unknown",
+    "all": "All"
+  },
+  "compound_lending": {
+    "header": "Compound Loan ({asset})",
+    "history": "Compound History"
+  },
+  "conflict_dialog": {
+    "action": {
+      "local": "Local",
+      "remote": "Remote"
+    },
+    "all_buttons_description": "Resolve for all conflicts",
+    "action_hint": {
+      "top": "Local changes have been detected. You have two options:",
+      "bottom": "You also have another extra option, you can manage the conflicts individually."
+    },
+    "duplicate_warn": "Assets with the following identifier(s) {identifiers} appear multiple times in the conflict data, which indicates a problem. If the conflict resolution fails please contact the team.",
+    "hint": "{conflicts} asset entries cannot be automatically updated. {remaining} remaining entry/ies require user input.",
+    "resolve_all_hint": "All conflicts will be resolved by using {source} data.",
+    "keep_local": "Keep All Local",
+    "keep_remote": "Keep All Remote",
+    "keep_local_tooltip": "No affected assets will be updated. Manual updates may be necessary.",
+    "keep_remote_tooltip": "Update all assets. No further action necessary.",
+    "subtitle": "{conflicts} asset entries cannot be automatically updated. {remaining} remaining entry/ies require user input.",
+    "table": {
+      "headers": {
+        "keep": "Keep",
+        "local": "Local",
+        "remote": "Remote"
+      }
+    },
+    "title": "Conflicts detected",
+    "manage": "Manage Conflicts"
+  },
+  "connection_failure": {
+    "default": "Connect to default",
+    "message": "A connection to the rotki backend was not possible, would you like to retry again?",
+    "retry": "Retry",
+    "title": "Connection failure"
+  },
+  "connection_loading": {
+    "message": "Connecting to rotki backend"
+  },
+  "cost_basis_table": {
+    "complete": "Complete",
+    "cost_basis": "Cost Basis",
+    "headers": {
+      "amount": "Amount Sold",
+      "full_amount": "Total acquired by event",
+      "rate": "{currency} Rate",
+      "remaining_amount": "Remaining after selling",
+      "taxable": "Taxable"
+    },
+    "incomplete": "Incomplete"
+  },
+  "create_account": {
+    "credentials": {
+      "description": "Remember that the user you create here is {highlight}, independent of the account create on the web.",
+      "highlight": "only enabled in the application",
+      "label_password": "Password",
+      "label_password_backup_reminder": "rotki saves all user data locally. I understand that if I lose my password, I lose access to my data. I have created a backup of the password.",
+      "label_password_repeat": "Repeat Password",
+      "label_username": "Profile Name",
+      "password_sync_requirement": "Ensure that the account uses the same password as the database originally backed up. You can't access the database if you input a different password.",
+      "validation": {
+        "check_prompt": "Confirm that you have read and created a backup",
+        "non_empty_password": "Please provide a password",
+        "non_empty_password_confirmation": "Please provide a password confirmation",
+        "non_empty_username": "Please provide a profile name",
+        "password_confirmation_mismatch": "The password confirmation does not match the provided password",
+        "valid_username": "A profile name must contain only alphanumeric characters and have no spaces"
+      }
+    },
+    "have_account": {
+      "description": "Already have an account?",
+      "log_in": "Unlock your account"
+    },
+    "introduction": {
+      "description": "rotki is a local application that respects your privacy.\n\nrotki accounts are encrypted using your password and {highlight}.\n\nThe account you create here is only useful for the app, on the web we use a different database.",
+      "highlight": "saved in your local filesystem"
+    },
+    "premium": {
+      "button_premium_approve": "Yes, enable premium",
+      "premium_question": "Are you already a rotki premium user and want to enable premium features?\nThis is needed if you want to sync your rotki database from another device at account creation. You can buy premium {premiumLink}"
+    },
+    "steps": {
+      "step_1": {
+        "description": "First step",
+        "title": "Introduction"
+      },
+      "step_2": {
+        "description": "Do you have a premium account on our website?",
+        "title": "Enable Premium"
+      },
+      "step_3": {
+        "description": "Set your credentials",
+        "title": "Create account"
+      },
+      "step_4": {
+        "title": "Usage analytics"
+      }
+    },
+    "title": "Create Account",
+    "usage_analytics": {
+      "description": "rotki is a local application and anonymous usage analytics is the only way for us to have an idea of how many people use our software, where they are from etc. These data are really important to us, are completely anonymous and help us create a better product for you.",
+      "label_confirm": "Submit anonymous usage analytics"
+    }
+  },
+  "currencies": {
+    "aud": "Australian Dollar",
+    "brl": "Brazilian Real",
+    "cad": "Canadian Dollar",
+    "chf": "Swiss Franc",
+    "cny": "Chinese Yuan",
+    "dkk": "Danish krone",
+    "eur": "Euro",
+    "gbp": "British Pound",
+    "inr": "Indian rupee",
+    "jpy": "Japanese Yen",
+    "krw": "Korean Won",
+    "ngn": "Nigerian naira",
+    "nok": "Norwegian krone",
+    "nzd": "New Zealand Dollar",
+    "pln": "Polish zloty",
+    "rub": "Russian Ruble",
+    "sek": "Swedish Krona",
+    "sgd": "Singapore Dollar",
+    "try": "Turkish Lira",
+    "twd": "New Taiwan dollar",
+    "usd": "United States Dollar",
+    "zar": "South African Rand"
+  },
+  "currency_drop_down": {
+    "hint": "Select as the main currency",
+    "profit_currency": "Profit Currency ({currency})"
+  },
+  "dashboard": {
+    "blockchain_balances": {
+      "add": "Add blockchain address",
+      "behaviour": {
+        "only_refresh_balances": "Only refresh balances",
+        "redetect_tokens": "Re-detect tokens and refresh balances",
+        "title": "Blockchain refresh button behaviour"
+      },
+      "title": "blockchain"
+    },
+    "exchange_balances": {
+      "add": "Add an exchange",
+      "title": "exchange"
+    },
+    "liabilities": {
+      "title": "Liabilities"
+    },
+    "liquidity_position": {
+      "refresh_tooltip": "Refresh LP Tokens",
+      "title": "LP Tokens"
+    },
+    "manual_balances": {
+      "add": "Add a manual balance",
+      "card_tooltip": "Aggregate value of manual balances entered. Fiat balances are aggregated in the banks entry.",
+      "title": "manual"
+    },
+    "snapshot": {
+      "convert_to_edit": {
+        "dialog": {
+          "actions": {
+            "yes": "Yes, I want to edit this entry"
+          },
+          "subtitle": "Do you want to edit this entry instead?",
+          "title": "This asset already exist in the balance snapshot"
+        }
+      },
+      "delete": {
+        "dialog": {
+          "message": "Are you sure you want to delete this snapshot?",
+          "title": "Delete snapshot"
+        },
+        "message": {
+          "failure": "Delete snapshot failed",
+          "success": "Snapshot successfully deleted",
+          "title": "Delete snapshot"
+        }
+      },
+      "download": {
+        "message": {
+          "failure": "Snapshot CSV export failed",
+          "success": "Snapshot exported to CSV successfully",
+          "title": "Snapshot CSV Export"
+        }
+      },
+      "edit": {
+        "dialog": {
+          "actions": {
+            "add_new_entry": "Add New Entry",
+            "delete_item": "Delete item",
+            "edit_item": "Edit item"
+          },
+          "balances": {
+            "add_title": "Add balance snapshot data",
+            "delete_confirmation": "Are you sure you want to delete this balance snapshot item?",
+            "delete_title": "Delete balance snapshot item",
+            "edit_title": "Update balance snapshot data",
+            "hints": {
+              "location": "This is optional. If specified, the location balance data will be adjusted automatically. If not, you have to update location balance data manually."
+            },
+            "nft": "NFT",
+            "nft_hint": "Accepted format: \"_nft_{'ETH address'}_{'collection number'}\"",
+            "only_show_existing": "Only show existing locations",
+            "preview": {
+              "from": "From",
+              "title": "This location value will be updated",
+              "to": "To"
+            },
+            "rules": {
+              "amount": "The amount field cannot be empty",
+              "asset": "The asset field cannot be empty",
+              "category": "The category field cannot be empty",
+              "price": "The price field cannot be empty",
+              "value": "The value field cannot be empty"
+            },
+            "title": "Balances Snapshot",
+            "token": "Token"
+          },
+          "fetch": {
+            "loading": "Fetching snapshot data"
+          },
+          "location_data": {
+            "add_title": "Add location data snapshot data",
+            "delete_confirmation": "Are you sure you want to delete this location data snapshot item?",
+            "delete_title": "Delete location data snapshot item",
+            "edit_title": "Update location data snapshot data",
+            "rules": {
+              "location": "The location field cannot be empty",
+              "value": "The value field cannot be empty"
+            },
+            "title": "Location Data Snapshot"
+          },
+          "message": {
+            "error": "Failed to update snapshot data: {message}",
+            "success": "Data was successfully updated",
+            "title": "Update snapshot data"
+          },
+          "title": "Edit snapshot data at {date}",
+          "total": {
+            "hint": "You have different amount between assets total and locations total. You can choose which amount to use.",
+            "rules": {
+              "total": "The value field cannot be empty"
+            },
+            "use_calculated_asset": "Use total from {length} asset(s) value: ",
+            "use_calculated_location": "Use total from {length} location(s) value: ",
+            "use_calculated_total": "Use calculated total value: ",
+            "warning": "This is total value that includes NFTs value. If you turn off setting \"Include NFTs in graphs and total amounts\", it will show value {amount} on the chart"
+          }
+        }
+      },
+      "export_database_snapshot": "Export database snapshot",
+      "search_asset": "Search asset",
+      "subtitle": "Click the button below to download snapshot for"
+    }
+  },
+  "dashboard_asset_table": {
+    "headers": {
+      "percentage_of_total_current_group": "% of total {group}",
+      "percentage_of_total_net_value": "% of net Value",
+      "percentage_total": "% of total"
+    },
+    "no_search_result": "Your search for \"{search}\" yielded no results.",
+    "select_visible_columns": "Select visible columns"
+  },
+  "data_management": {
+    "purge_data": {
+      "confirm": {
+        "message": "Are you sure you want to purge the cached data for {source} ({value})?",
+        "message_all": "Are you sure you want to purge the cached data for all {source}?",
+        "title": "Confirm cached data purge"
+      },
+      "error": "Purging the cached data for {source} failed: {message}",
+      "subtitle": "Allows you to purge data cached by rotki",
+      "success": "Data was successfully deleted",
+      "title": "Purge Data",
+      "transaction_purge_confirm": {
+        "message": "Are you sure you want to purge this transactions data? This action will remove the transactions and the receipts, and it will take a long time to re-query everything."
+      }
+    },
+    "purge_images_cache": {
+      "confirm": {
+        "message": "Are you sure you want to clear the images cached for {source}?",
+        "title": "Confirm clear images cached"
+      },
+      "error": "Clear the cached images for {source} failed: {message}",
+      "hint": "Empty this field to remove the cache for all",
+      "label": {
+        "asset_icons": "Asset icons",
+        "asset_to_clear": "Search asset icon to clear",
+        "ens_avatars": "ENS avatars",
+        "ens_to_clear": "ENS avatars to clear"
+      },
+      "select_image_source": "Select image cache source to clear",
+      "subtitle": "Allows you to purge image cached by rotki",
+      "success": "Cache was successfully cleared",
+      "title": "Purge Images Cache",
+      "tooltip": "Purge the cached images for the selected source"
+    },
+    "refresh_cache": {
+      "confirm": {
+        "message": "Are you sure you want to refresh the cache for {source}?",
+        "title": "Confirm refresh cache"
+      },
+      "error": "Clear the cache for {source} failed: {message}",
+      "label": {
+        "general_cache": "General cache (Curve, MakerDAO, Yearn, Velodrome, Aerodrome, and Gearbox)",
+        "general_cache_short": "General cache (Curve, MakerDAO, etc.)"
+      },
+      "select_cache": "Select cache to refresh",
+      "subtitle": "Allows you to refresh data cached by rotki",
+      "success": "Cache was successfully cleared",
+      "title": "Refresh cache",
+      "tooltip": "Refresh cache for selected source"
+    },
+    "title": "Manage Data"
+  },
+  "data_table": {
+    "items_no": "Items #",
+    "rows_per_page": "Rows per page",
+    "no_data": "No data available"
+  },
+  "database_backups": {
+    "action": {
+      "delete": "Delete the backup",
+      "download": "Download the backup"
+    },
+    "backup": {
+      "message": "A database backup was successfully created {filepath}",
+      "title": "Database Backup"
+    },
+    "backup_error": {
+      "message": "There was a problem creating the database backup: {message}",
+      "title": "Database Backup failure"
+    },
+    "column": {
+      "size": "Size",
+      "version": "Version"
+    },
+    "confirm": {
+      "mass_message": "Are you sure you want to delete these {length} database backup(s)?",
+      "message": "Are you sure you want to delete the {size} database backup from {date}?",
+      "title": "Delete database backup"
+    },
+    "delete_error": {
+      "mass_message": "There was a problem while deleting the database backups: {message}",
+      "message": "There was a problem deleting {file}: {message}",
+      "title": "Backup delete failure"
+    },
+    "load_error": {
+      "message": "There was a problem loading the list of available backups: {message}",
+      "title": "Database Backup load"
+    }
+  },
+  "database_info_display": {
+    "directory": "Database Directory:",
+    "globaldb": "Global Database",
+    "globaldb_assets": "Assets version:",
+    "globaldb_schema": "Schema version:",
+    "title": "Database Info",
+    "userdb": "User Database",
+    "userdb_size": "Size on disk:",
+    "userdb_version": "Database Version:"
+  },
+  "database_manager": {
+    "refresh_tooltip": "Refresh the database backup list"
+  },
+  "date_format_help": {
+    "directive": {
+      "ampm": "morning or afternoon marker",
+      "day_numeric": "Day (numeric)",
+      "day_of_the_week": "Day of the week numeric",
+      "day_of_year": "Day of the year",
+      "day_of_year_padded": "Three-digit day of the year (with leading zeroes)",
+      "day_two_digit": "Two-digit day",
+      "hour": "Hour 24h",
+      "hour_padded": "Two-digit hour (with leading zeroes) 24h",
+      "hour_twelve": "Two-digit hour (with leading zeroes) 12h",
+      "hour_twelve_padded": "Hour 12h",
+      "locale_date": "Date in the locale format",
+      "locale_datetime": "Date and time in the locale format",
+      "locale_time": "Time in the locale format",
+      "milliseconds": "Milliseconds",
+      "minutes": "Minutes",
+      "minutes_padded": "Two-digit minutes (with leading zeroes)",
+      "month": "Full month name",
+      "month_numeric": "Month (numeric)",
+      "month_short": "Abbreviated month name",
+      "month_two_digit": "Two-digit month",
+      "seconds": "Seconds",
+      "seconds_padded": "Two-digit seconds (with leading zeroes)",
+      "timezone": "Time zone",
+      "timezone_offset": "RFC 822 numeric offset from GMT",
+      "week_day": "Full weekday name",
+      "week_day_short": "Abbreviated weekday name",
+      "year": "Four-digit year",
+      "year_two_digit": "Last two digits of the year"
+    },
+    "example": "Resulting date ({example})",
+    "subtitle": "These are the supported date formatting options",
+    "title": "Date Format"
+  },
+  "date_time_picker": {
+    "date_only_format": "Date should be in {dateFormat} format",
+    "default_format": "Date should be in {dateFormat} [HH:mm:[ss]] format",
+    "limit_now": "Cannot use future date",
+    "milliseconds_format": "Date should be in {dateFormat} [HH:mm[:ss[.SSS]]] format",
+    "select_timezone": "Select timezone",
+    "timezone_field": {
+      "non_empty": "Timezone should be specified"
+    }
+  },
+  "decentralized_overview": {
+    "deprecated_warning": "This view is deprecated and does not show all supported protocols. Account and dashboard tokens should include all detected protocol tokens.",
+    "empty_subtitle": "Please add at least one ETH account that has DeFi balances",
+    "empty_title": "No DeFi overview can be shown",
+    "loading": "Please wait while your defi balances are getting loaded...",
+    "title": "Defi Overview"
+  },
+  "defi_overview": {
+    "multiple_assets": "Multiple assets"
+  },
+  "defi_protocol_selector": {
+    "filter_all": "Showing all results",
+    "filter_specific": "Showing results for selected protocol",
+    "label": "Filter protocol(s)"
+  },
+  "defi_wizard": {
+    "steps": {
+      "select_modules": {
+        "hint": "If no modules are specified, querying for the supported modules will be disabled.",
+        "subtitle": "Select the modules you would like to activate.",
+        "title": "Select Modules"
+      },
+      "setup": {
+        "description_line_one": "rotki will attempt by default to retrieve information for all your accounts and available modules. The retrieval might require a lot of time based on the number of accounts you have.",
+        "description_line_three": "You can use the default settings if you want to have information for all protocols fetched for all accounts automatically. (Module Settings can be changed at a later time).",
+        "description_line_two": "To reduce the query time you can specify only the DeFi modules and accounts you are interested in.",
+        "subtitle": "Select options to improve your rotki DeFi experience",
+        "title": "Setup DeFi",
+        "used_default": "Use Default"
+      }
+    }
+  },
+  "deposit_withdrawals": {
+    "filter": {
+      "action": "filter by the action",
+      "asset": "filter by the asset",
+      "location": "filter by the location"
+    }
+  },
+  "deposits_withdrawals": {
+    "details": {
+      "no_details": "No details found.",
+      "title": "Details"
+    },
+    "headers": {
+      "action": "Action",
+      "fee": "Fee"
+    },
+    "label": "asset movements",
+    "loading": "Please wait while your asset movements are getting loaded...",
+    "refresh_tooltip": "Refresh deposits & withdrawals",
+    "selected": "{count} item(s) selected",
+    "title": "Exchange Deposits & Withdrawals"
+  },
+  "docker_warning": {
+    "action": "Yes, I understand",
+    "documentation": "documentation",
+    "title": "You are running rotki in docker. Make sure you have read our {0} and understand the potential risk that running rotki in this way entails."
+  },
+  "ens_names": {
+    "error": {
+      "message": "Failed to query ENS names: {message}"
+    },
+    "task": {
+      "title": "Querying ENS names"
+    }
+  },
+  "error": {
+    "process_running": "A rotki backend process is already running. This is known to cause problems with the operation of the application. Please kill these processes pids: [{pids}] and restart the application.",
+    "generic": {
+      "title": "Something went wrong",
+      "message": "We encountered an internal error while processing your request. If this issue persists, please contact our support team with the details below: \nError Code: {code} \nError Message: {message} \nPath: {path}"
+    }
+  },
+  "error_screen": {
+    "backend_error": "There is a problem with the backend.",
+    "copy_tooltip": "Copy the error text to the clipboard",
+    "message": "Open an issue in Github and include rotki_electron.log and rotkehlchen.log. The backend's output follows below:",
+    "start_failure": "rotki failed to start"
+  },
+  "eth2_input": {
+    "ownership": {
+      "hint": "*Optional: By default it is 100%",
+      "validation": "The value should be > 0% and <= 100%"
+    },
+    "validator_index": {
+      "validation": "Validator index can be filled with numeric value only."
+    },
+    "ownership_percentage": "Ownership Percentage",
+    "public_key": "Public Key"
+  },
+  "eth2_page": {
+    "no_premium": "ETH Staking is",
+    "toggle": {
+      "withdrawal": "Withdrawal Address",
+      "hint": "Switch the filtering and display mode between ETH staking validators and ETH1 Addresses",
+      "key": "Validator"
+    },
+    "setting": {
+      "refresh_validator_daily_stats_on_load": {
+        "hint": "Disable this setting to avoid getting rate limited. Rotki will only show cached data.",
+        "title": "Sync daily stats data from beaconcha.in by default."
+      }
+    }
+  },
+  "eth2_validator_filter": {
+    "label": "Select Withdrawal address"
+  },
+  "eth2_validator_limit_row": {
+    "complete": "Only showing balances for {limit} out of {total} validators. Click {button} to purchase rotki Premium and view the complete validator balances.",
+    "label": "Validators"
+  },
+  "evm_rpc_node_manager": {
+    "activate_error": {
+      "title": "Activating/Deactivating node {node} failed"
+    },
+    "add_button": "Add Node",
+    "add_dialog": {
+      "title": "Add an {chain} RPC Node"
+    },
+    "add_error": {
+      "title": "Adding {chain} RPC Node"
+    },
+    "confirm": {
+      "message": "Are you sure you want to delete the RPC node '{node}' ({endpoint}) for {chain}?",
+      "title": "Delete {chain} RPC Node"
+    },
+    "connected": {
+      "false": "Not connected",
+      "true": "Connected"
+    },
+    "delete_error": {
+      "title": "Deleting {chain} RPC Node"
+    },
+    "delete_tooltip": "Delete the selected RPC Node",
+    "edit_dialog": {
+      "title": "Edit {chain} RPC Node"
+    },
+    "edit_error": {
+      "title": "Editing {chain} RPC Node"
+    },
+    "edit_tooltip": "Edit the selected RPC Node",
+    "etherscan": "Etherscan API used by rotki",
+    "loading_error": {
+      "title": "Loading {chain} RPC Nodes"
+    },
+    "private_node": "This is a private node added by the user",
+    "private_node_hint": "Private nodes take priority over public nodes",
+    "public_node": "This is a public node",
+    "weight": "Node weight {weight}%"
+  },
+  "exchange_balances": {
+    "add_exchange": "Add exchange",
+    "click_here": "Click here",
+    "no_connected_exchanges": "You do not have any connected exchanges. {0} to set up an Exchange Connection.",
+    "received_interest": "Received Interest",
+    "received_interest_history": "History",
+    "refresh_tooltip": "Refresh exchange balances ignoring any cached entries",
+    "select_exchange": "Select Exchange",
+    "select_hint": "Select an exchange to view asset details.",
+    "tabs": {
+      "balances": "Balances",
+      "savings_interest_history": "Savings Interest History"
+    },
+    "title": "Exchange Balances"
+  },
+  "exchange_keys_form": {
+    "api_key": {
+      "non_empty": "The api key field cannot be empty."
+    },
+    "api_secret": {
+      "non_empty": "The api secret field cannot be empty."
+    },
+    "edit": {
+      "activate_tooltip": "Edit the api keys for the exchange.",
+      "deactivate_tooltip": "Cancel the edit of the api keys for the exchange."
+    },
+    "exchange": "Exchange",
+    "name": {
+      "non_empty": "The name field cannot be empty."
+    },
+    "passphrase": {
+      "non_empty": "The passphrase field cannot be empty."
+    }
+  },
+  "exchange_settings": {
+    "confirmation": {
+      "message": "Are you sure you want to delete the API key and secret for the {location} entry named {name} from rotki? This action can not be undone and you will need to obtain the key and secret again from the exchange.",
+      "title": "Confirmation Required"
+    },
+    "delete": {
+      "tooltip": "Delete the exchange account"
+    },
+    "dialog": {
+      "add": {
+        "title": "Add an exchange"
+      },
+      "edit": {
+        "title": "Edit an exchange"
+      }
+    },
+    "edit": {
+      "tooltip": "Edit the exchange account"
+    },
+    "header": {
+      "sync_enabled": "Sync Enabled"
+    },
+    "inputs": {
+      "api_key": "API Key",
+      "api_key_name": "API Key Name",
+      "api_secret": "API Secret",
+      "format": "Format",
+      "kraken_account": "Select the type of your Kraken account",
+      "passphrase": "Passphrase",
+      "private_key": "Private Key"
+    },
+    "keys": "Keys",
+    "subtitle": "rotki can connect to supported exchanges and automatically pull your trades and balances from them. See the {0} for more information.",
+    "sync": {
+      "messages": {
+        "description": "Cannot {action} syncing exchange {location} with name {name}: {message}",
+        "disable": "disable",
+        "enable": "enable",
+        "title": "Failed to update non syncing exchanges"
+      }
+    },
+    "usage_guide": "Usage Guide"
+  },
+  "explorer_input": {
+    "validation": {
+      "https": "Only https urls are allowed"
+    }
+  },
+  "explorers": {
+    "address": "Addresses",
+    "address_url": "Addresses will open at {addressUrl}",
+    "block": "Blocks",
+    "block_url": "Blocks will open at {blockUrl}",
+    "chain_selector": "Blockchain",
+    "subtitle": "Set the external explorer urls for addresses and transaction",
+    "title": "Blockchain explorers",
+    "tx": "Transactions",
+    "tx_url": "Transactions will open at {txUrl}"
+  },
+  "external_services": {
+    "api_key": "API key",
+    "beaconchain": {
+      "delete_tooltip": "Deletes the Beaconcha.in API key",
+      "description": "rotki uses Beaconcha.in to obtain information about ETH staking in your portfolio. An API key is only needed if you are being rate-limited.",
+      "hint": "Enter your Beaconcha.in API key",
+      "title": "Beaconcha.in"
+    },
+    "blockscout": {
+      "delete_tooltip": "Deletes the Blockscout API key",
+      "description": "rotki uses Blockscout to obtain information about ETH withdrawal queries, and more. An API key is only needed if you are being rate-limited.",
+      "hint": "Enter your Blockscout API key",
+      "title": "Blockscout"
+    },
+    "confirmation": {
+      "message": "Are you sure you want to delete this API Key?",
+      "title": "Delete API Key"
+    },
+    "covalent": {
+      "delete_tooltip": "Deletes the Covalent API key",
+      "description": "rotki can use Covalent to get historical data for various chains",
+      "hint": "Enter your Covalent API key",
+      "title": "Covalent"
+    },
+    "credential": {
+      "username": "Username",
+      "password": "Password"
+    },
+    "cryptocompare": {
+      "delete_tooltip": "Deletes the CryptoCompare API key",
+      "description": "rotki uses cryptocompare to obtain price information about assets in your portfolio. An API key is only needed if you have a lot of assets and are being rate-limited.",
+      "hint": "Enter your CryptoCompare API key",
+      "title": "CryptoCompare"
+    },
+    "delete_error": {
+      "description": "Error while removing the external service api keys: {message}"
+    },
+    "etherscan": {
+      "delete_tooltip": "Deletes the {chain} Etherscan API key",
+      "description": "Recommended for any EVM blockchain balances or transactions if you are not using your own node.",
+      "hint": "Enter your {chain} Etherscan API key",
+      "title": "Etherscan"
+    },
+    "get_api_key": "You can apply for an API key {link}",
+    "loopring": {
+      "delete_tooltip": "Delete your Loopring API key",
+      "description": "Used to query balances in Loopring. This API key will only be able to query the account that generated this key.",
+      "hint": "Enter your Loopring API key",
+      "not_enabled": "The Loopring module is not enabled. Your balances won't be retrieved unless you enable the loopring module",
+      "settings": "Settings",
+      "title": "Loopring"
+    },
+    "gnosispay": {
+      "title": "Gnosis Pay",
+      "description": "Add your Gnosis Pay session token to integrate Gnosis Pay transactions.",
+      "warning": "Gnosis Pay integration is experimental. The session token provides read-only access to your Gnosis Pay data.",
+      "understand": "I understand",
+      "delete_tooltip": "Delete Gnosis Pay session token",
+      "non_premium": "Gnosis Pay integration is only available for premium users.",
+      "api_key_label": "Session Token",
+      "api_key_hint": "Enter your Gnosis Pay session token",
+      "session_token_instructions": "Follow this guide to obtain your Gnosis Pay session token {link}"
+    },
+    "monerium": {
+      "delete_tooltip": "Deletes the Monerium credentials",
+      "description": "Used to augment Monerium EVM transactions with banking information.",
+      "non_premium": "Upgrade to premium to be able to use this feature",
+      "title": "Monerium",
+      "understand": "I understand the risk",
+      "warning": "At the moment, Monerium uses basic authentication only, so these are not read-only credentials."
+    },
+    "opensea": {
+      "delete_tooltip": "Delete your OpenSea API key",
+      "description": "Used to query NFT information and balances from OpenSea.",
+      "hint": "Enter your OpenSea API key",
+      "title": "Opensea"
+    },
+    "set": {
+      "error": {
+        "message": "Error while settings external service api keys: {error}"
+      },
+      "success": {
+        "message": "Successfully updated the key for {serviceName}"
+      }
+    },
+    "set_credential": {
+      "error": {
+        "message": "Error while settings external service credentials: {error}"
+      },
+      "success": {
+        "message": "Successfully updated the credentials for {serviceName}"
+      }
+    },
+    "subtitle": "rotki connects to various service providers in order to obtain information such as historical prices or blockchain data. In certain cases rotki depends on these APIs for basic information, in which case you will need to provide an API key.",
+    "thegraph": {
+      "delete_tooltip": "Deletes the Graph API key",
+      "description": "rotki uses the Graph to obtain a variety of information such as balancer balances and ENS data",
+      "hint": "Enter your The Graph API key",
+      "title": "The Graph"
+    }
+  },
+  "external_trade_form": {
+    "amount": {
+      "hint": "Amount bought/sold"
+    },
+    "base_asset": {
+      "hint": "The base asset of the trade",
+      "label": "Base Asset"
+    },
+    "buy_quote": "With",
+    "date": {
+      "hint": "Time the trade took place"
+    },
+    "fee": {
+      "hint": "[Optional] Fee if any of the trade that occurred",
+      "label": "Fee"
+    },
+    "fee_currency": {
+      "hint": "[Optional] The currency used for the fee",
+      "label": "Fee Currency"
+    },
+    "link": {
+      "hint": "[Optional] A link to the trade. e.g. in an explorer",
+      "label": "Link"
+    },
+    "notes": {
+      "hint": "[Optional] Additional notes to store for the trade",
+      "label": "Additional notes"
+    },
+    "quote_amount": {
+      "label": "Quote amount bought/sold"
+    },
+    "quote_asset": {
+      "hint": "The quote asset of the trade",
+      "label": "Quote Asset"
+    },
+    "rate": {
+      "label": "Rate of the trade"
+    },
+    "rate_not_found": "We could not find a rate for the specified pair.",
+    "sell_quote": "For",
+    "summary": {
+      "buy": "{label}: Buy {amount} {base} with {quote} for {rate} {quote} per {base}",
+      "label": "Summary",
+      "sell": "{label}: Sell {amount} {base} for {quote} for {rate} {quote} per {base}"
+    },
+    "trade_type": {
+      "buy": "Buy",
+      "label": "Trade type",
+      "sell": "Sell"
+    },
+    "validation": {
+      "non_empty_amount": "The amount cannot be empty",
+      "non_empty_base": "The base asset cannot be empty",
+      "non_empty_fee": "The fee cannot be empty when fee currency is inputted",
+      "non_empty_fee_currency": "The fee currency cannot be empty when fee is inputted",
+      "non_empty_quote": "The quote asset cannot be empty",
+      "non_empty_quote_amount": "The quote amount cannot be empty",
+      "non_empty_rate": "The rate cannot be empty"
+    }
+  },
+  "file_upload": {
+    "click_to_upload": "Click to upload",
+    "date_input_format": {
+      "hint": "Use this if date format in your file is: {format}",
+      "placeholder": "Input custom date format",
+      "switch_label": "Use custom date format to parse your file"
+    },
+    "drag_and_drop": "{button} or drag and drop",
+    "import_complete": "Import was completed successfully.",
+    "loading": "Loading",
+    "many_files_selected": "Only one file must be selected",
+    "only_files": "Only {fileFilter} files are allowed",
+    "replace_file": "Replace file",
+    "task": {
+      "title": "Importing csv for source: {source}"
+    }
+  },
+  "frontend_settings": {
+    "hint": {
+      "refresh": "How often (in minutes) your balances will be automatically refreshed"
+    },
+    "label": {
+      "abbreviate_number": "Use abbreviations for large numbers.",
+      "animations": "Reduce animations effect. This setting will improve app performance. NOTE: You will see animations that are not smooth, which aims to reduce the use of system resources.",
+      "enable_alias_names": "Show alias name for blockchain addresses.",
+      "minimum_digit_to_be_abbreviated": "Minimum value to be abbreviated",
+      "query_period": "Query period in seconds",
+      "query_period_hint": "How often (in seconds) the backend will be checked for messages,",
+      "refresh": "Set the automatic refresh period",
+      "refresh_enabled": "Enabled",
+      "scramble": "Scramble data. Use this when sharing screenshots with others, e.g. when filing bug reports. NOTE: This setting does not persist between sessions.",
+      "scramble_multiplier": "Scramble multiplier",
+      "show_graph_range_selector": "Show graph range selector for line chart",
+      "zero_based": "Use zero as the lowest y-axis value for the graphs",
+      "zero_based_hint": "By default the lowest value is the minimum in the selected period"
+    },
+    "subtitle": {
+      "abbreviate_number": "For example, 1.234.567 will appear as 1.23 M when this setting is enabled",
+      "alias_names": "Alias name for addresses",
+      "graph_basis": "Graph basis",
+      "query": "Periodic status query",
+      "refresh": "Automatic balance refresh",
+      "scramble_multiplier": "Multiplier number used when scrambling balances. This will affects amount and fiat value.",
+      "show_graph_range_selector": "Show graph range selector"
+    },
+    "title": "Frontend-only Settings",
+    "validation": {
+      "animations": {
+        "error": "Error setting animations state: {message}"
+      },
+      "enable_alias_names": {
+        "error": "Failed to change alias names visibility"
+      },
+      "periodic_query": {
+        "error": "Error setting query period",
+        "invalid_period": "Period must be between {start} and {end}",
+        "non_empty": "Please enter the number of seconds"
+      },
+      "refresh_period": {
+        "error": "Failed to set the refresh period",
+        "invalid_period": "Period must be between {start} and {end} min",
+        "non_empty": "Please enter the number of minutes"
+      },
+      "scramble": {
+        "error": "Error setting scramble mode: {message}"
+      },
+      "timeframe": {
+        "error": "Failed to set the default timeframe for the user",
+        "success": "Default timeframe set to {timeframe}"
+      }
+    }
+  },
+  "general_settings": {
+    "amount": {
+      "label": {
+        "currency_location": "Currency location",
+        "decimal_separator": "Decimal separator",
+        "location_after": "After",
+        "location_before": "Before",
+        "resulting_format": "Resulting format:",
+        "thousand_separator": "Thousands separator"
+      },
+      "labels": {
+        "floating_precision": "Floating Precision",
+        "main_currency": "Select Main Currency",
+        "main_currency_subtitle": "Select as the main currency"
+      },
+      "title": "Amounts Settings"
+    },
+    "date_display": {
+      "validation": {
+        "empty": "The date display format cannot be empty",
+        "invalid": "No valid pattern detected in the date display format"
+      }
+    },
+    "date_display_format_hint": "Resulting date: {format}",
+    "date_display_tooltip": "Restore the default date display format",
+    "date_input_format_hint": "Input example: {format}",
+    "decimal_separator": {
+      "validation": {
+        "cannot_be_numeric_character": "The decimal separator cannot be numeric character",
+        "cannot_be_the_same": "The decimal separator cannot be the same as the thousand separator",
+        "empty": "The decimal separator cannot be empty"
+      }
+    },
+    "external_service_setting": {
+      "label": {
+        "connect_timeout": "Connect timeout",
+        "connect_timeout_hint": "The number of seconds to wait before giving up on establishing a connection to an external service.",
+        "query_retry_limit": "Query retry limit",
+        "query_retry_limit_hint": "The number of times to retry a query to external services before giving up.",
+        "read_timeout": "Read timeout",
+        "read_timeout_hint": "The number of seconds to wait for the first byte after a connection to an external service has been established."
+      },
+      "title": "External service settings",
+      "validation": {
+        "connect_timeout": {
+          "invalid_range": "Connect timeout must be larger than {min}",
+          "non_empty": "Please input the connect timeout"
+        },
+        "query_retry_limit": {
+          "invalid_range": "Query retry limit must be larger than {min}",
+          "non_empty": "Please input the query retry limit"
+        },
+        "read_timeout": {
+          "invalid_range": "Read timeout must be larger than {min}",
+          "non_empty": "Please input the read timeout"
+        }
+      }
+    },
+    "labels": {
+      "anonymous_analytics": "Should anonymous usage analytics be submitted?",
+      "auto_detect_tokens": "Auto detect tokens",
+      "auto_detect_tokens_hint": "Automatically detect tokens and refresh balances by periodically checking history events.",
+      "balance_saving_frequency": "Balance data saving frequency in hours",
+      "beacon_rpc_endpoint": "RPC Endpoint for the ETH consensus layer beacon node",
+      "btc_derivation_gap": "BTC derivation gap limit",
+      "date_display_format": "Date display format",
+      "date_input_format": "Date input format",
+      "display_date_in_localtime": "Display date in localtime and not in UTC for CSV export.",
+      "dot_rpc_endpoint": "Polkadot Node RPC Endpoint",
+      "force_saved_language_setting_in_machine_hint": "This setting is saved on your user settings. Activate this to keep this setting when you logged out.",
+      "ksm_rpc_endpoint": "Kusama Node RPC Endpoint",
+      "language": "Selected language",
+      "csv_delimiter": "CSV export delimiter",
+      "treat_eth2_as_eth": "Should treat ETH2 (Staked ETH) as ETH",
+      "version_update_check": "Set the version update check period while in app",
+      "version_update_check_enabled": "Enabled",
+      "chains_to_skip_detection": "EVM Chains for which to skip automatic detection"
+    },
+    "language_contribution_tooltip": "This feature is experimental and may not work as expected for some languages. This is because all static sentences in the app have to be manually translated and that is a long and ongoing process. Therefore, we need your contribution to speed it up. Click here for more information.",
+    "nft_setting": {
+      "allow_all_confirmation": {
+        "message": "Are you sure you want to allow images from all domains.",
+        "title": "Allow images from all domains"
+      },
+      "label": {
+        "include_nfts": "Include NFTs in the graphs and total net worth",
+        "include_nfts_hint": "By default graphs and dashboard include the value of all the NFTs",
+        "render_setting": {
+          "allow_all": "Allow all images",
+          "only_allow_whitelisted": "Only allow images from whitelisted domains"
+        },
+        "whitelist_domains": "Whitelist domains",
+        "whitelisted_domains": "Whitelisted domains",
+        "whitelisted_domains_hint": "Enter single or multiple comma separated domains. Press the save button on the right to save the changes",
+        "whitelisted_domain_entries": "no entries | {count} unique entry | {count} unique entries"
+      },
+      "subtitle": {
+        "include_nfts": "Include NFTs in graphs and total amounts",
+        "nft_images_rendering_setting": "NFT images rendering setting",
+        "nft_images_rendering_setting_hint": "Fetching NFT images from malicious server may result in leakage of your privacy, read more {link}"
+      },
+      "title": "NFT setting",
+      "update_whitelist_confirmation": {
+        "message": "Are you sure you want to allow images for NFT from these domains? | Are you sure you want to allow images for NFT from domain: {domain} ?",
+        "title": "Update whitelisted domains"
+      },
+      "messages": {
+        "error": "Error setting allowed domains for image rendering of NFTs",
+        "success": "Allowed domains for image rendering of NFTs saved successfully"
+      }
+    },
+    "rpc_node_setting": {
+      "title": "RPC node setting"
+    },
+    "thousand_separator": {
+      "validation": {
+        "cannot_be_numeric_character": "The thousand separator cannot be numeric character",
+        "cannot_be_the_same": "The thousand separator cannot be the same as the decimal separator",
+        "empty": "The thousand separator cannot be empty"
+      }
+    },
+    "title": "General Settings",
+    "validation": {
+      "analytics": {
+        "error": "Error setting anonymous usage analytics"
+      },
+      "auto_detect_tokens": {
+        "error": "Error setting tokens auto detection"
+      },
+      "balance_frequency": {
+        "error": "Error setting balance save frequency to {frequency}",
+        "invalid_frequency": "Frequency must be between {start} and {end} hours",
+        "non_empty": "Please enter the number of hours",
+        "success": "Data save frequency set to {frequency} hours"
+      },
+      "beacon_rpc": {
+        "error": "There was an error setting the RPC endpoint for the ETH consensus layer",
+        "success_set": "The RPC endpoint for the ETH consensus layer was set to {endpoint}",
+        "success_unset": "The RPC endpoint for the ETH consensus layer was successfully unset"
+      },
+      "btc_derivation_gap": {
+        "error": "Error setting the BTC derivation gap limit",
+        "success": "The BTC derivation gap limit was successfully changed to {limit}"
+      },
+      "csv_delimiter": {
+        "empty": "CSV delimiter cannot be empty.",
+        "single_character": "CSV delimiter must be a single character.",
+        "error": "Please provide a valid delimiter.",
+        "success": "CSV delimiter {delimiter} has been successfully set."
+      },
+      "currency": {
+        "error": "Error setting the main currency",
+        "success": "Main currency set to {symbol}"
+      },
+      "currency_location": {
+        "error": "Error setting currency location",
+        "success": "Currency location set to {currencyLocation}"
+      },
+      "date_display_format": {
+        "error": "Error setting date display format",
+        "success": "Date display set to {dateFormat}"
+      },
+      "date_input_format": {
+        "error": "Error setting date input format",
+        "success": "Date input set to {dateFormat}"
+      },
+      "decimal_separator": {
+        "error": "Error setting decimal separator",
+        "success": "Decimal separator set to {decimalSeparator}"
+      },
+      "display_date_in_localtime": {
+        "error": "Error setting the display date in local time setting"
+      },
+      "dot_rpc": {
+        "error": "There was an error setting the Polkadot node RPC endpoint",
+        "success_set": "The Polkadot node RPC endpoint was set to {endpoint}",
+        "success_unset": "The Polkadot node RPC endpoint was successfully unset"
+      },
+      "floating_precision": {
+        "error": "Error setting floating precision to {precision}",
+        "non_empty": "Please input the floating precision",
+        "success": "Floating precision set to {precision}"
+      },
+      "ksm_rpc": {
+        "error": "There was an error setting the Kusama node RPC endpoint",
+        "success_set": "The Kusama node RPC endpoint was set to {endpoint}",
+        "success_unset": "The Kusama node RPC endpoint was successfully unset"
+      },
+      "language": {
+        "error": "Error change language setting"
+      },
+      "thousand_separator": {
+        "error": "Error setting thousand separator",
+        "success": "Thousand separator set to {thousandSeparator}"
+      },
+      "treat_eth2_as_eth": {
+        "error": "Error change setting for treat ETH2 (Staked ETH) as ETH"
+      },
+      "version_update_check_frequency": {
+        "error": "Error setting version update check frequency",
+        "invalid_frequency": "Period must be between {start} and {end} hours",
+        "non_empty": "Please enter the number of hours"
+      },
+      "chains_to_skip_detection": {
+        "error": "Error setting EVM chains for which to skip automatic token detection",
+        "success": "EVM Chains for which to skip automatic token detection saved successfully"
+      }
+    },
+    "version_update_check_hint": "How often (in hours) your app version will be checked for update"
+  },
+  "generate": {
+    "custom_selection": "Custom",
+    "labels": {
+      "end_date": "End Date",
+      "start_date": "Start Date"
+    },
+    "period": "Period",
+    "sub_period": {
+      "all": "All"
+    },
+    "sub_period_label": "Period Details",
+    "validation": {
+      "empty_end_date": "End date cannot be empty",
+      "empty_start_date": "Start date cannot be empty",
+      "end_after_start": "The end time should be after the start time."
+    }
+  },
+  "global_search": {
+    "menu_tooltip": "Search ({modifier} + {key})",
+    "no_actions": "No actions found",
+    "search_placeholder": "Search anything..."
+  },
+  "hash_link": {
+    "open_link": "Open in external block explorer"
+  },
+  "help_sidebar": {
+    "about": {
+      "subtitle": "About the application",
+      "title": "About"
+    },
+    "browser_log": {
+      "error": {
+        "empty": {
+          "message": "Oops, there are no log entries",
+          "title": "Empty log entries"
+        }
+      },
+      "subtitle": "Download browser log file",
+      "title": "Browser Log"
+    },
+    "faq": {
+      "subtitle": "Questions on the application",
+      "title": "FAQ"
+    },
+    "github": {
+      "subtitle": "Review our code and open issues",
+      "title": "Github"
+    },
+    "support": {
+      "subtitle": "Join our active community and get support",
+      "title": "Discord"
+    },
+    "title": "Help & Support",
+    "tooltip": "Help",
+    "twitter": {
+      "subtitle": "Follow us",
+      "title": "Twitter / X"
+    },
+    "user_guide": {
+      "subtitle": "Get started here",
+      "title": "Usage Guide"
+    }
+  },
+  "helpers": {
+    "refresh_header": {
+      "tooltip": "Refresh {title} data"
+    }
+  },
+  "ignore": {
+    "failed": {
+      "ignore_message": "{length} asset(s) could not be added to ignored assets: {message}",
+      "ignore_title": "Failed to ignore assets",
+      "unignore_message": "{length} asset(s) could not be removed from ignored assets: {message}",
+      "unignore_title": "Failed to unignore assets"
+    },
+    "no_items": {
+      "description": "All the selected entries are already ignored | All the selected entries are already included",
+      "title": "No entries to ignore | No entries to unignore"
+    },
+    "spam": {
+      "action": {
+        "add": "Mark asset as spam"
+      },
+      "failed": {
+        "mark_message": "Token could not be marked as spam asset: {message}",
+        "mark_title": "Failed to add mark token as spam asset",
+        "unmark_message": "Token could not be removed from spam assets list: {message}",
+        "unmark_title": "Failed to remove token from spam assets list"
+      },
+      "hint": "The asset is marked as a spam asset. To be able to unignore this asset, you need to remove it from the spam assets list."
+    },
+    "whitelist": {
+      "action": {
+        "add": "Add asset to whitelist"
+      },
+      "failed": {
+        "unwhitelist_message": "Token could not be removed from whitelisted assets: {message}",
+        "unwhitelist_title": "Failed to remove token from whitelist",
+        "whitelist_message": "Token could not be added to whitelisted assets: {message}",
+        "whitelist_title": "Failed to add token to whitelist"
+      },
+      "hint": "The asset is whitelisted, meaning that the rotki algorithm will not mark it as a spam asset. To be able to ignore this asset, you need to remove it from the whitelist."
+    }
+  },
+  "ignore_buttons": {
+    "ignore": "Ignore",
+    "ignore_tooltip": "Ignored the selected actions in the profit/loss report",
+    "unignore": "Unignore",
+    "unignore_tooltip": "Included the selected actions in the profit/loss report"
+  },
+  "import_data": {
+    "binance": {
+      "line_one": "The columns we process include: User_ID, UTC_Time, Account, Operation, Coin, Change, and Remark.",
+      "line_two": "You can obtain the CSV file from {link}.",
+      "line_three": "Due to Binance's CSV format, there is a chance that not all data will be imported. If this happens, you will receive a warning.",
+      "name": "Binance"
+    },
+    "bisq": {
+      "import": "Import {0} from Bisq",
+      "import_trade": "trades",
+      "line_one": "[Experimental] If you find an issue with the imported data, let us know so we can adapt the code accordingly.",
+      "name": "Bisq"
+    },
+    "bitcoin_tax": {
+      "import": "Import {0} from bitcoin.tax",
+      "import_types": "trades, income, and spending",
+      "line_one": "We support the import of trades, income and spending csv file types.",
+      "line_three": "The ‘swap’ action of the trade file type that represents a coin rename or a fork, is treated elsewhere by rotki so no history event needs to be created for it.",
+      "line_two": "All imported events are mapped to rotki’s history events.",
+      "name": "bitcoin.tax"
+    },
+    "bitmex": {
+      "import": "Import {0} from bitmex",
+      "import_types": "wallet history",
+      "line_one": "[Experimental] If you find an issue with the imported data, let us know so we can adapt the code accordingly.",
+      "line_two": "Amounts in the wallet history file are assumed to be Bitcoin. If you would like this feature supported for other currencies, please reach out.",
+      "name": "BitMEX"
+    },
+    "bittrex": {
+      "import": "Import {0} from Bittrex",
+      "import_types": "trades, deposits, and withdrawals",
+      "name": "Bittrex",
+      "warning": "* There may be some issues with the CSV file from Bittrex if you got it via email after closing your account that could require manual intervention. The timestamp format can vary within the same CSV file, the columns may be shifted, and generally, all the data may have inconsistencies."
+    },
+    "bitstamp": {
+      "import": "Import {0} from Bitstamp",
+      "import_types": "trades, deposits, and withdrawals",
+      "name": "Bitstamp"
+    },
+    "blockfi": {
+      "import": "Import {0} from BlockFi",
+      "import_trade": "trades",
+      "import_transactions": "transactions",
+      "line_one": "[Experimental] If you find an issue with the imported data, let us know so we can adapt the code accordingly.",
+      "line_two": "BlockFi lets you export two different files. Trades will be imported from the file that only contains trades.",
+      "name": "BlockFi"
+    },
+    "cointracking": {
+      "line_one": "Trades/deposits/withdrawals from CoinTracking do not include fees.",
+      "line_three": "ETH/BTC Transactions are treated as deposits/withdrawals so they are not imported in rotki. To import ETH transactions simply input your accounts in {0} and they will be imported automatically for you.",
+      "line_two": "All trades imported from CoinTracking will always be considered as buys due to the way the data are represented.",
+      "link": "Blockchain Accounts/Balances",
+      "name": "CoinTracking",
+      "preferred": "For the above reasons it's preferred to directly connect your exchanges in order to import data from there. If you do not do that a lot of accuracy is lost."
+    },
+    "cryptocom": {
+      "line_four": "Only transactions are imported here (for tax report), if you want the assets be displayed in your rotki balances, you have to add them manually as manual balances: {0}",
+      "line_four_link": "Manual Accounts/Balances",
+      "line_one": "[Early stage] This import script may miss some transaction types, like withdrawals. Since we can't have an exhaustive list of every type, we develop it using what we know at the time. If you think that import script can be improved and you can help providing more data types, {0}.",
+      "line_one_link": "please let us know",
+      "line_three": "Trades/deposits/withdrawals from crypto.com do not include fees details. They are waived at the moment (August 2020) or they are handled in the traded amount.",
+      "line_two": "{0} If you want to connect your Crypto.com Exchange account, please wait until we support it and then connect to it as an exchange.",
+      "line_two_warning": "It only concerns the Crypto.com mobile application.",
+      "name": "Crypto.com",
+      "source_name": "crypto.com mobile app"
+    },
+    "custom": {
+      "import_events": "Import events",
+      "import_trades": "Import trades",
+      "name": "Custom Import"
+    },
+    "description": "You can manually import data from the services below by dragging the file on the respective area or clicking the select button.",
+    "nexo": {
+      "import": "Import {0} from Nexo",
+      "import_transactions": "transactions",
+      "line_one": "[Experimental] If you find an issue with the imported data let us know so we can adapt the code accordingly.",
+      "name": "Nexo"
+    },
+    "note": "Important notes for importing data from {0}'s CSV exports.",
+    "notice": "Those platforms could change their format in a backwards incompatible way quite often. As such this import may stop working. If that happens {link} and we will see what we can do.",
+    "notice_link": "open an issue with rotki",
+    "select_source": {
+      "title": "Select source"
+    },
+    "shapeshift": {
+      "import": "Import {0} from ShapeShift",
+      "import_trade": "trades",
+      "line_one": "[Experimental] If you find an issue with the imported data, let us know so we can adapt the code accordingly.",
+      "line_two": "ShapeShift lets you export a trades file. Trades will be imported from the file that only contains trades.",
+      "name": "ShapeShift"
+    },
+    "title": "Import Data",
+    "uphold": {
+      "import": "Import {0} from Uphold",
+      "import_trade": "trades",
+      "line_one": "[Experimental] If you find an issue with the imported data, let us know so we can adapt the code accordingly.",
+      "line_two": "Uphold lets you export a transactions file. It can be found under activity at the top right of the activity list.",
+      "name": "Uphold"
+    },
+    "kucoin": {
+      "import": "Import {0} from Kucoin",
+      "import_types": "trades",
+      "line_one": "We support the import of trades csv file type.",
+      "name": "Kucoin"
+    },
+    "blockpit": {
+      "line_one": "Trades imported from Blockpit are treated as buys, for instance, selling ETH for USD will be shown as buying USD with ETH.",
+      "name": "Blockpit"
+    }
+  },
+  "input_mode_select": {
+    "import_from_wallet": {
+      "only_metamask": "* Currently, only MetaMask supports multiple address selections. Other wallets only allow active address to be imported.",
+      "imported": "Your address(es) have been imported to the address input",
+      "label": "Import addresses from browser wallet",
+      "missing": "We can't detect any wallet in this browser.",
+      "missing_tooltip": {
+        "wallet_is_not_installed": "This browser doesn't have any wallets installed. You can go to the extension store of your browser and install one.",
+        "wallet_is_not_enabled": "The extension for the wallet is disabled. You can enable it in the Extensions/Add-Ons menu, depending on your browser.",
+        "title": "Here are the common cause:"
+      }
+    },
+    "manual_add": {
+      "label": "Manual"
+    },
+    "xpub_add": {
+      "label": "XPUB"
+    }
+  },
+  "kraken_page": {
+    "loading": "Your Kraken staking information is loading...",
+    "page": {
+      "api_key": "API key",
+      "description": "To see your staking information you need to add a Kraken {link}",
+      "title": "Kraken Staking"
+    }
+  },
+  "kraken_staking_events": {
+    "filter": {
+      "asset": "filter by the staked asset",
+      "date_hint": "format {format} HH:mm:ss (time/seconds are optional)",
+      "end_date": "filter by the end date of the staking events",
+      "start_date": "filter by the start date of the staking events",
+      "type": "filter by the type of the staking events"
+    },
+    "refresh_tooltip": "Refresh your Kraken staking events",
+    "types": {
+      "receive_staked_asset": "receive staked asset",
+      "stake_asset": "stake asset",
+      "staking_reward": "staking reward",
+      "unstake_asset": "unstake asset"
+    }
+  },
+  "kraken_staking_overview": {
+    "current": "current",
+    "earned": "Total Earned",
+    "hint": {
+      "current": "Based on the current price of assets",
+      "historical": "Based on the historical price of assets"
+    },
+    "historical": "historical",
+    "title": "Overview"
+  },
+  "kraken_staking_received": {
+    "switch": {
+      "current": "Current",
+      "historical": "Historical"
+    },
+    "title": "Earned Per Asset"
+  },
+  "lending": {
+    "currently_deposited": "Currently Deposited",
+    "effective_interest_rate": "Effective Savings Rate",
+    "effective_interest_rate_tooltip": "The savings rate across all of the protocols in which you are actively lending, weighted based on the relative position in each protocol.",
+    "history": "History",
+    "loading": "Please wait while your balances are getting loaded...",
+    "profit_earned": "Profit Earned"
+  },
+  "lending_asset_table": {
+    "headers": {
+      "effective_interest_rate": "Effective Interest Rate",
+      "usd_value": "{currency} value"
+    }
+  },
+  "liabilities": {
+    "no_selection": "Select a loan to view more information"
+  },
+  "liquidity_pool_details": {
+    "liquidity": "Liquidity",
+    "title": "Total in pools",
+    "tooltip": "Show details about the pool assets",
+    "total_amount": "Total amount",
+    "total_value_in_symbol": "Total {symbol} value"
+  },
+  "liquidity_pool_selector": {
+    "label": "Filter by pool(s)"
+  },
+  "liquity_lending": {
+    "header": "Liquity Trove {troveId}",
+    "trove_events": "Trove Events"
+  },
+  "liquity_page": {
+    "no_premium": "Liquity Staking"
+  },
+  "liquity_pools": {
+    "liquidation_gains": "Unclaimed liquidation gains",
+    "no_lusd_deposited": "No LUSD deposited",
+    "rewards": "Unclaimed @:common.rewards",
+    "title": "Stability pool deposits"
+  },
+  "liquity_staking_details": {
+    "has_proxy_addresses": "has {length} proxy address(es):",
+    "refresh_tooltip": "Refresh the staked amounts and prices",
+    "select_account": "Select account"
+  },
+  "liquity_staking_events": {
+    "title": "Stake Events"
+  },
+  "liquity_statistic": {
+    "estimated_pnl": "Estimated PnL",
+    "estimated_pnl_warning": "This estimation PnL takes into consideration the current unclaimed gains",
+    "no_stability_pool_gains": "No Unclaimed Stability Pool Gains",
+    "no_staking_gains": "No Unclaimed Staking Gains",
+    "no_statistics": "No statistics found",
+    "stability_pool_gains": "Stability Pool Gains",
+    "staking_gains": "Staking Gains",
+    "switch": {
+      "current": "Current",
+      "historical": "Historical"
+    },
+    "title": "Statistics",
+    "total_deposited_stability_pool": "Total Deposited Stability Pool",
+    "total_gains_stability_pool": "Total Gains Stability Pool (Claimed)",
+    "total_gains_staking": "Total Gains Staking (Claimed)",
+    "total_withdrawn_stability_pool": "Total Withdrawn Stability Pool",
+    "view": {
+      "hide": "Show less",
+      "show": "Show more"
+    }
+  },
+  "loan_collateral": {
+    "apy": "APY",
+    "current_ratio": "Current ratio",
+    "liquidation_price": "Liquidation Price",
+    "locked_collateral": "Locked up collateral",
+    "per_asset": "Collateral Assets",
+    "ratio": "Collateralization Ratio",
+    "stable_apr": "Stable APR",
+    "title": "Collateral",
+    "total_collateral_ratio": "Total Collateral Ratio",
+    "variable_apr": "Variable APR",
+    "watchers": {
+      "add": "Add collateralization ratio watcher",
+      "dialog": {
+        "label": "Collateralization Ratio",
+        "message": "Add / Edit / Delete watchers for Maker Vault #{identifier} with current collateralization ratio {collateralizationRatio} and liquidation ratio {liquidationRatio}.",
+        "title": "Collateralization watchers"
+      },
+      "edit": "Edit {n} collateralization watcher | Edit {n} collateralization watchers"
+    }
+  },
+  "loan_debt": {
+    "outstanding_debt": "Outstanding debt",
+    "title": "Debt"
+  },
+  "loan_header": {
+    "owned_by": "Owned by:"
+  },
+  "loan_liquidation": {
+    "liquidated_collateral": "Liquidated collateral",
+    "liquidation_events": "Liquidation Events",
+    "liquidation_price": "Liquidation price",
+    "minimum_ratio": "Minimum ratio",
+    "no_events": "No liquidation events have occurred for this loan.",
+    "outstanding_debt": "Outstanding debt at liquidation",
+    "title": "Liquidation",
+    "total_value_lost": "Total value lost"
+  },
+  "loan_stake": {
+    "no_lqty_staked": "No LQTY staked",
+    "title": "Stake",
+    "unclaimed_rewards": "Unclaimed rewards"
+  },
+  "locations": {
+    "total_asset_price": "Total Asset Price"
+  },
+  "login": {
+    "button_no_account": "Don’t have an account?",
+    "button_create_account": "Create account",
+    "credential_error": {
+      "description": "If you have not yet created an app account, you will need to do so in order to unlock your account.",
+      "support": "If you need assistance, please contact us in our support channel on discord.",
+      "title": "Please note that your website account and app account are separate and cannot be used interchangeably."
+    },
+    "custom_backend": {
+      "hint": "The url the backend you would like to connect (leave empty for default).",
+      "label": "Backend URL",
+      "placeholder": "http://localhost:4242",
+      "session_only": "Save only for this session",
+      "tooltip": "Connect to a different rotki backend",
+      "validation": {
+        "non_empty": "The custom backend url cannot be empty",
+        "url": "The entry inserted is not in a valid url format"
+      }
+    },
+    "description": {
+      "more_details": "{documentation} shows you more details about the local app and the user.",
+      "our_docs": "Our documentation",
+      "welcome": "Welcome! Please enter your details."
+    },
+    "incomplete_upgrade_error": {
+      "abort": "Abort",
+      "question": "Do you want to resume from latest backup?",
+      "resume": "Resume",
+      "title": "User action required to continue login"
+    },
+    "label_password": "Password",
+    "label_username": "Profile Name",
+    "logout": "Logout",
+    "migrating_data": {
+      "current": "Step {currentStep} of {totalSteps} of data migration {currentVersion} is applied.",
+      "title": "Data Migration",
+      "warning": "Data migration {currentVersion} is running. Please don't close the app until it's finished."
+    },
+    "no_profiles_found": "No profiles were found on this machine. {create_account} ",
+    "remember_password": "Remember Password",
+    "remember_password_tooltip": "The password will be saved on password management tool on your local machine (e.g. Keychain in MacOS)",
+    "remember_username": "Remember Profile Name",
+    "sync_error": {
+      "local_modified": "Local last modified: {0}",
+      "question": "Do you want to replace your local database?",
+      "remote_modified": "Remote last modified: {0}",
+      "title": "User action required for DB sync"
+    },
+    "title": "Unlock account",
+    "upgrading_db": {
+      "current": "Step {currentStep} of {totalSteps} of database upgrade v{currentVersion} is applied.",
+      "title": "Database Upgrade",
+      "warning": "The database is being upgraded from version {fromVersion} to {toVersion}. Please don't close the app until it's finished."
+    },
+    "validation": {
+      "non_empty_password": "Please provide a password",
+      "non_empty_username": "Please provide a profile name",
+      "valid_username": "A profile name must contain only alphanumeric characters and have no spaces"
+    },
+    "welcome_description": "Welcome to the open source portfolio manager that protects your privacy.",
+    "welcome_title": "Welcome to rotki"
+  },
+  "macos_unsupported": {
+    "header": "Unsupported macOS Version",
+    "message": "rotki's minimum supported macOs version is High Sierra(10.13)"
+  },
+  "maker_dao_vault_loan": {
+    "borrowing_history": "Borrowing History",
+    "header": "Maker Vault #{identifier} ({collateralType})"
+  },
+  "makerdao_vault_debt": {
+    "stability_fee": "Stability fee",
+    "total_lost": "Total lost due to interest"
+  },
+  "manage_user_assets": {
+    "export": {
+      "button": "Export",
+      "subtitle": "Create a zip archive of your assets",
+      "success": "The archive was created successfully",
+      "title": "Export"
+    },
+    "import": {
+      "subtitle": "Restore user assets from a zip archive"
+    },
+    "title": "Export/Import User Assets",
+    "warning": "This functionality is designed to allow you to easily move your assets from one instance of rotki to another. It requires both instances to be of the same version. Using this functionality across different versions might result in errors."
+  },
+  "managed_asset_content": {
+    "add_asset": "Add asset"
+  },
+  "manual_balances": {
+    "add_manual_balance": "Add Manual Balance",
+    "balances": "Manually Tracked Balances",
+    "dialog": {
+      "add": {
+        "title": "Add a manual balance"
+      },
+      "edit": {
+        "subtitle": "Modify balance amount, location, and tags",
+        "title": "Edit Manual Balance"
+      }
+    },
+    "liabilities": "Manually Tracked Liabilities"
+  },
+  "manual_balances_form": {
+    "fields": {
+      "balance_type": "Balance Type",
+      "create_a_custom_asset": "Create a custom asset",
+      "input_manual_price": "Add and use manual price",
+      "label": "Label",
+      "price_asset": "Asset Price",
+      "tags": "Tags"
+    },
+    "type": {
+      "liability": "Liability"
+    },
+    "validation": {
+      "amount": "The amount cannot be empty",
+      "asset": "The asset cannot be empty",
+      "label_empty": "The label cannot be empty",
+      "label_exists": "Label {label} already exists"
+    }
+  },
+  "manual_balances_table": {
+    "delete_dialog": {
+      "message": "Are you sure you want to delete this entry?",
+      "title": "Delete manually tracked balance"
+    },
+    "delete_tooltip": "Delete balance",
+    "edit_tooltip": "Edit balance",
+    "refresh": {
+      "tooltip": "Refresh manual balances"
+    }
+  },
+  "merge_dialog": {
+    "done": "The asset merge is complete. The old asset will still appear in the frontend. To make sure the new one is shown everywhere either restart the application or manually refresh balances in each place the old asset appears.",
+    "error": "Merge was not successful",
+    "hint": "The source asset will be merged into the target asset and all its usages will be updated.",
+    "merge": "Merge",
+    "source": {
+      "label": "Source",
+      "non_empty": "The source identifier cannot not be empty"
+    },
+    "source_hint": "The asset identifier that you want to merge into the target",
+    "subtitle": "Merge two assets",
+    "target": {
+      "label": "Target",
+      "non_empty": "The target asset cannot be empty"
+    },
+    "target_hint": "Identifier: {identifier}",
+    "title": "Merge Assets"
+  },
+  "message": {
+    "error": {
+      "title": "Error"
+    },
+    "success": {
+      "title": "Success"
+    }
+  },
+  "missing_exchange_rate": {
+    "message": "This session of rotki may have errors if you use this currency.",
+    "title": "Missing exchange rate"
+  },
+  "module_activator": {
+    "hint": "* Modules that are activated for all addresses will not appear here",
+    "subtitle": "Select which modules should be queried for this account",
+    "title": "Enabled modules"
+  },
+  "module_not_active": {
+    "at_least_one": "You need to activate at least one of them.",
+    "not_active": "{module} module(s) not active. Please visit the {link}. {text}",
+    "settings_link": "Module settings"
+  },
+  "module_selector": {
+    "actions": {
+      "disable_all": "Disable All",
+      "enable_all": "Enable All"
+    },
+    "all_accounts": "All",
+    "filter": "Search module(s)",
+    "select_accounts_hint": "Select accounts for which data will be retrieved for each submodule. If no addresses are selected data will be retrieved for all available addresses",
+    "table": {
+      "enabled": "Enabled",
+      "select_accounts": "Select accounts"
+    }
+  },
+  "module_settings": {
+    "active_modules_description": "Only data for the selected modules will be queried. If no modules are selected, querying for all the supported modules will be disabled.",
+    "hint": "* Please remember that after activating a module, you need to logout and login again for the activation to take effect",
+    "title": "Module Settings"
+  },
+  "navigation_menu": {
+    "accounts_balances": "Accounts & Balances",
+    "accounts_balances_sub": {
+      "blockchain_balances": "Blockchain Balances",
+      "exchange_balances": "Exchange Balances",
+      "manual_balances": "Manual Balances",
+      "non_fungible_balances": "Non Fungible Balances"
+    },
+    "api_keys": "API Keys",
+    "api_keys_sub": {
+      "exchanges": "Exchanges",
+      "external_services": "External Services",
+      "premium": "rotki Premium"
+    },
+    "calendar": "Calendar",
+    "dashboard": "Dashboard",
+    "defi": "DeFi",
+    "defi_sub": {
+      "airdrops": "Airdrops",
+      "deposits_sub": {
+        "liquidity": "Liquidity Pools",
+        "liquidity_sub": {
+          "balancer": "Balancer",
+          "sushiswap": "Sushiswap",
+          "uniswap_v2": "Uniswap v2",
+          "uniswap_v3": "Uniswap v3"
+        },
+        "protocols": "Protocols"
+      },
+      "liabilities": "Liabilities",
+      "overview": "Overview"
+    },
+    "history": "History",
+    "history_sub": {
+      "deposits_withdrawals": "Exch. Deposits & Withdrawals",
+      "history_events": "History Events",
+      "trades": "Exch. Trades"
+    },
+    "import_data": "Import Data",
+    "locations": "Locations",
+    "manage_address_book": "Manage Address Book",
+    "manage_assets": "Manage Assets",
+    "manage_assets_sub": {
+      "custom_assets": "Custom Assets",
+      "assets": "Assets",
+      "more": "More",
+      "newly_detected": "Newly Detected Tokens",
+      "cex_mapping": "Manage CEX Mapping"
+    },
+    "manage_prices": "Manage Prices",
+    "manage_prices_sub": {
+      "historic_prices": "Historic Prices",
+      "latest_prices": "Latest Prices"
+    },
+    "nfts": "NFTs Gallery",
+    "profit_loss_report": "Profit and Loss Report",
+    "settings": "Settings",
+    "settings_sub": {
+      "accounting": "Accounting",
+      "data_security": "Data & Security",
+      "general": "General",
+      "modules": "Modules"
+    },
+    "staking": "Staking",
+    "statistics": "Statistics"
+  },
+  "net_worth_chart": {
+    "current_balance": "Current balance"
+  },
+  "nft_balance_table": {
+    "column": {
+      "percentage": "% of net Value",
+      "price_in_asset": "Price in asset"
+    },
+    "contract_address": "Contract address",
+    "hidden_hint": "Image is hidden for safety reason, you can manage it in NFT setting.",
+    "refresh": "Refresh the NFT balances",
+    "title": "NFT Balances",
+    "token_id": "Token ID"
+  },
+  "nft_gallery": {
+    "allow_domain": "Click this button to trust images from domain: ",
+    "empty_filter": "No NFTs matching the filter parameters",
+    "empty_subtitle": "No NFTs have been detected",
+    "empty_title": "No NFTs detected",
+    "error_title": "Error while loading NFTs",
+    "loading": "Loading NFTs",
+    "refresh_tooltip": "Reload NFTs",
+    "select_account": "Select account",
+    "select_collection": "Select collection",
+    "sort": {
+      "collection": "Collection"
+    },
+    "upgrade": "Displaying {limit} NFTs. To view more please upgrade to {link}"
+  },
+  "no_premium_placeholder": {
+    "get_premium": "@:common.visit_website",
+    "no_premium": "@:common.no_premium",
+    "premium_only": " {text} @:common.available_to_premium"
+  },
+  "no_task_running": {
+    "description": "No Pending tasks"
+  },
+  "non_fungible_balances": {
+    "column": {
+      "custom_price": "Custom Price",
+      "price_in_asset": "Price in Asset"
+    },
+    "ignore": "Ignore NFT",
+    "refresh": "Refresh the balances",
+    "title": "Non Fungible Balances"
+  },
+  "notes_menu": {
+    "delete_confirmation": "Are you sure you want to delete this note?",
+    "dialog": {
+      "add_title": "Add note",
+      "edit_title": "Edit note"
+    },
+    "empty_notes": "No notes found/saved",
+    "labels": {
+      "content": "Take a note...",
+      "title": "Title"
+    },
+    "last_updated": "Last updated: {datetime}",
+    "limit_warning": "The limit of {limit} user notes has been reached in the free plan. To get more notes you can upgrade to {link}",
+    "rules": {
+      "content": {
+        "non_empty": "Please fill the note"
+      }
+    },
+    "search": "Search",
+    "tabs": {
+      "general": "General",
+      "in_this_page": "In \"{page}\" ",
+      "in_this_page_tooltip": "Notes specialize for  \"{page}\" section"
+    },
+    "tooltip": "Notes"
+  },
+  "notification_indicator": {
+    "tooltip": "Notifications"
+  },
+  "notification_messages": {
+    "accounting_rule_conflict": {
+      "action": "Resolve conflicts",
+      "message": "Conflicts detected for {conflicts} accounting rule(s)",
+      "title": "Accounting rule conflict"
+    },
+    "address_migration": {
+      "message": "The following address has been added to {chain}: {addresses}|The following addresses have been added to {chain}: {addresses}",
+      "title": "Address has been added to {chain}|Addresses have been added to {chain}"
+    },
+    "backend": {
+      "title": "Backend"
+    },
+    "missing_api_key": {
+      "action": "Enter key",
+      "get_key": "Get API key",
+      "etherscan": {
+        "message": "Rotki queries for {location} chain are working slower because you dont have {location} {service} API key configured. Press @.quote:notification_messages.missing_api_key.get_key to make one or @.quote:notification_messages.missing_api_key.action to add it in the app.",
+        "title": "{location} {service} API key"
+      },
+      "thegraph": {
+        "message": "Rotki cannot query {location} data because you don't have {service} API key configured, or the API key you are using isn't authorized for {location}. Press @.quote:notification_messages.missing_api_key.get_key to make one or @.quote:notification_messages.missing_api_key.action to add it in the app. Read the docs {docs} for more information.",
+        "title": "{service} API key for {location}"
+      }
+    },
+    "new_detected_token": {
+      "action": "See more",
+      "message": "New token with identifier {identifier} was detected from event processing and queries.|{count} new tokens were detected from event processing and queries.",
+      "title": "New Token Detected|New Tokens Detected"
+    },
+    "premium": {
+      "active": {
+        "message": "Your premium subscription is detected.",
+        "title": "Premium features activated"
+      },
+      "inactive": {
+        "expired_message": "Your premium subscription is expired. Go to rotki website to renew your subscription.",
+        "network_problem_message": "We couldn't verify your premium subscription due to network problems.",
+        "title": "Premium features deactivated"
+      }
+    },
+    "reminder": {
+      "open_calendar": "Open Calendar"
+    },
+    "unknown_asset_mapping": {
+      "title": "Unknown asset from {location}",
+      "message": "Found unknown asset \"{identifier}\" from {location} ({name}). \n Ignoring its {details}.",
+      "actions": {
+        "add_mapping": "Add Mapping"
+      }
+    },
+    "snapshot_failed": {
+      "message": "Could not save the balance snapshot at {location}. {error}",
+      "title": "Balance Snapshot failed"
+    },
+    "csv_import_result": {
+      "errors": "The following errors occurred during import:",
+      "rows": "(Row: {rows}) | (Rows: {rows})",
+      "summary": "Imported {imported}/{total} entries successfully.",
+      "title": "CSV Import Result: {sourceName}"
+    }
+  },
+  "notification_popup": {
+    "dismiss_all": "Dismiss all the pending notifications",
+    "tooltip": "Number of Pending notifications"
+  },
+  "notification_sidebar": {
+    "clear_tooltip": "Clear all notifications",
+    "confirmation": {
+      "message": "This action will clear all the active notifications. Do you want to proceed?",
+      "title": "Clear active notifications"
+    },
+    "no_messages": "No messages!",
+    "tabs": {
+      "error": "Error",
+      "needs_action": "Needs Action",
+      "reminder": "Reminder",
+      "view_all": "View All"
+    },
+    "title": "Notifications",
+    "view_calendar": "View Calendar"
+  },
+  "oracle_cache_management": {
+    "clear_error": "Clearing the cache for {fromAsset} to {toAsset} failed: {error}",
+    "create_cache": "Cache Pair prices",
+    "create_tooltip": "Fetch and cache historical prices for the specified price pair",
+    "delete_confirmation": {
+      "message": "Are you sure you want to delete all cached prices for the {fromAsset} to {toAsset} pair on {selection}?",
+      "title": "Delete all the cached prices"
+    },
+    "delete_tooltip": "Delete the prices cached for this pair and the selected price oracle",
+    "from_asset": "From Asset",
+    "headers": {
+      "from": "From Asset",
+      "from_date": "From Date",
+      "to": "To Asset",
+      "to_date": "To Date"
+    },
+    "notification": {
+      "error": "The cache creation for pair {fromAsset} to {toAsset} on failed: {error}",
+      "success": "The cache for pair {fromAsset} to {toAsset} on {source} was successfully created",
+      "title": "Price pair cache creation"
+    },
+    "penalty": {
+      "subtitle": "Penalty settings for misbehaving oracle(s) in runtime.",
+      "title": "Oracle penalty settings",
+      "labels": {
+        "oracle_penalty_duration": "Oracle penalty duration",
+        "oracle_penalty_threshold_count": "Oracle penalty threshold count"
+      },
+      "hints": {
+        "oracle_penalty_duration": "The duration in seconds for which an oracle is penalized",
+        "oracle_penalty_threshold_count": "The number of failures after which an oracle is penalized."
+      },
+      "validation": {
+        "oracle_penalty_duration": {
+          "invalid_period": "Duration must be greater than {min} second.",
+          "non_empty": "Please enter the number of seconds"
+        },
+        "oracle_penalty_threshold_count": {
+          "invalid_period": "Number of failures must be greater than {min}",
+          "non_empty": "Please enter the number of failures"
+        }
+      }
+    },
+    "select_oracle": "Select price oracle",
+    "subtitle": "Create/delete and view cached prices",
+    "title": "Oracle cache",
+    "to_asset": "To Asset"
+  },
+  "oracles": {
+    "manual_latest": "Manual latest",
+    "uniswap_v2": "Uniswap V2",
+    "uniswap_v3": "Uniswap V3"
+  },
+  "overall_balances": {
+    "loading": "LOADING",
+    "premium_hint": "Get the full experience by upgrading to rotki premium"
+  },
+  "overview": {
+    "details_dialog": {
+      "subtitle": "Protocol asset details"
+    },
+    "stat_card": {
+      "content": {
+        "labels": {
+          "total_collateral": "Total Collateral",
+          "total_debt": "Total Debt",
+          "total_deposited": "Total Deposited"
+        }
+      },
+      "headers": {
+        "borrowing": "Liabilities"
+      }
+    }
+  },
+  "percentage_display": {
+    "symbol": "%"
+  },
+  "pinned": {
+    "tooltip": "Pinned Section"
+  },
+  "poap_delivery_airdrops": {
+    "title": "Claimable POAP Delivery NFTs"
+  },
+  "premium_components": {
+    "aave_borrowing": {
+      "total_earned": "Total Earned",
+      "total_earned_hint": "By debt repayment from liquidation",
+      "total_lost": "Total Lost",
+      "total_lost_hint": "By debt interest and liquidation"
+    },
+    "aave_earned": {
+      "total": "Aave: Total earned",
+      "total_hint": "From deposit interest"
+    },
+    "common": {
+      "apr": "APR",
+      "asset": "Asset",
+      "collateral": "Collateral",
+      "debt": "Debt",
+      "no_entries_found": "No {title} entries found",
+      "pool": "Pool",
+      "profit_loss": "Profit/Loss",
+      "select_address": "@:common.select_address"
+    },
+    "compound": {
+      "debt_loss": "Debt Loss",
+      "interest_profit": "Interest Profit",
+      "liquidation_profit": "Liquidation profit",
+      "rewards": "@:common.rewards"
+    },
+    "eth2_staking": {
+      "active_validators": "{status} Validators",
+      "based_of_performance": "Based of performance of",
+      "corresponds_to_percentage_of_the_validator_pnl": "This corresponds to {percentage} % of the validator pnl.",
+      "daily": {
+        "description": "Based on the daily prices of ETH",
+        "title": "Daily"
+      },
+      "daily_stats": "Daily Stats",
+      "daily_stats_refresh": "Get latest data from beaconcha.in",
+      "earned": "Earned",
+      "headers": {
+        "income": "Income",
+        "validator": "Validator"
+      },
+      "overview": "Overview",
+      "performance": {
+        "index": "Index",
+        "status": "Status",
+        "apr": "APR",
+        "outstanding": "Outstanding",
+        "withdrawals": "Withdrawn",
+        "execution": "Execution"
+      },
+      "status": {
+        "all": "All",
+        "active": "Active",
+        "exited": "Exited"
+      },
+      "ranges": {
+        "all": "All Time",
+        "custom": "Custom",
+        "one_day": "1D",
+        "one_month": "1M",
+        "one_week": "1W",
+        "one_year": "1Y"
+      },
+      "rewards": {
+        "consensus": {
+          "description": "Based on the current price of ETH",
+          "title": "Outstanding Consensus Layer Rewards"
+        },
+        "el": "Execution Layer Rewards",
+        "withdrawn_cl": "Withdrawn from consensus layer"
+      },
+      "staking_per_beacon_chain": "Staking per Validator",
+      "staking_per_eth1_address": "Staking per ETH1 address",
+      "total_based_on_eth_daily_prices": "The total is based on the daily prices of ETH",
+      "validator_index": "Validator index"
+    },
+    "lending": {
+      "yearn_inaccuracy": "Historic fiat price for yearn.finance vault events may be inaccurate."
+    },
+    "liquidity": {
+      "headers": {
+        "asset_1_pnl": "Asset 1 PnL",
+        "asset_2_pnl": "Asset 2 PnL",
+        "asset_pnl": "Asset PnL",
+        "pnl": "PnL",
+        "total_pnl": "Total PnL"
+      }
+    },
+    "staking": {
+      "balance_overview": "Balance Overview",
+      "detail_for_address": "Detail for {address}",
+      "headers": {
+        "issuance": "Issuance +",
+        "operation": "Operation",
+        "pool": "Pool",
+        "redemption": "Redemption +",
+        "stake": "Stake",
+        "value": "Value"
+      },
+      "no_accounts": "No accounts with {protocol} staking were detected.",
+      "pools": "Pools",
+      "refresh": "Refresh the staking details",
+      "staking_balances_per_address": "Staking balances per address",
+      "staking_history": "Staking History",
+      "unclaimed_rewards": "Unclaimed rewards"
+    },
+    "statistics": {
+      "asset_amount_and_value_over_time": "Asset amount and value over time",
+      "max_visible": "Maximum assets to show",
+      "max_visible_required": "You cannot show more than {availableAssets} assets",
+      "min_visible_required": "You have to show at least one asset.",
+      "netvalue_over_time": "Netvalue over time",
+      "no_balance_snapshot_data_available": "No balance snapshot data available.",
+      "range_selector": {
+        "clear": "Clear",
+        "clear_date_range": "Clear date range",
+        "data_available": "Data available",
+        "ending_date_must_before_starting_date": "The ending date cannot be earlier than the starting date.",
+        "no_entries_available_before": "There are no entries available before"
+      },
+      "refresh_the_net_value_data": "Refresh the net value data",
+      "select_asset": "Search for an asset",
+      "search_asset_to_see_graph": "Search for an asset to see the graph",
+      "show_graph_for_selected_range": "Show the graph for the selected range",
+      "value_distribution_by_asset": "Value distribution by asset",
+      "value_distribution_by_location": "Value distribution by location",
+      "visible_percentage": "% of visible items only:"
+    },
+    "theme_manager": {
+      "dark_theme": "Dark Theme",
+      "light_theme": "Light Theme",
+      "reset": {
+        "default": "Reset to the default application color",
+        "short": "Reset to default"
+      },
+      "select_color": "Select Color",
+      "subtitle": "Manage colors for the app theme",
+      "title": "Theme"
+    },
+    "theme_switch": {
+      "auto": "Auto (Detect Device Theme)",
+      "dark": "Dark",
+      "light": "Light",
+      "tooltip": "Switch to {mode} mode"
+    },
+    "unsupported_app_version": {
+      "minimum_supported": "The minimum supported version is v{v}",
+      "subtitle": "This version of rotki is no longer supported by the premium components.",
+      "title": "Unsupported app version",
+      "update_to_latest": "For better support please update to the latest release."
+    },
+    "vault": {
+      "borrowing_history": "Borrowing History"
+    }
+  },
+  "premium_credentials": {
+    "label_api_key": "rotki API Key",
+    "label_api_secret": "rotki API Secret",
+    "restore_synced_database": "Restore synced database",
+    "validation": {
+      "non_empty_key": "The API key cannot be empty",
+      "non_empty_secret": "The API secret cannot be empty"
+    }
+  },
+  "premium_loading_failed": {
+    "description": "This might indicate a problem with the premium component service.",
+    "open_issue": "If the problem persists open an issue in our issue tracker.",
+    "title": "There was an error loading the component.",
+    "try_again": "Please try again later."
+  },
+  "premium_lock": {
+    "tooltip": "Feature is only supported with a premium subscription"
+  },
+  "premium_settings": {
+    "actions": {
+      "delete": "Delete Key",
+      "replace": "Replace Key",
+      "setup": "Setup",
+      "sync": "Allow data sync with rotki Server"
+    },
+    "delete_confirmation": {
+      "message": "Are you sure you want to delete the rotki premium keys for your account? If you want to re-enable premium you will have to enter your keys again.",
+      "title": "Delete rotki premium keys?"
+    },
+    "error": {
+      "removing_failed": "Deleting the keys was not successful",
+      "setting_failed": "Setting the keys was not successful"
+    },
+    "fields": {
+      "api_key": "API Key",
+      "api_secret": "API Secret"
+    },
+    "get": "Get premium",
+    "premium_active": "@:premium_settings.title is active",
+    "subtitle": "@:premium_settings.title is an optional subscription service to gain access to analytics, graphs, and unlock many additional features. For more information on what is available visit the {0} website.",
+    "title": "rotki Premium"
+  },
+  "price_accuracy_hint": {
+    "tooltip": "These prices are based on the current exchange rate of historical USD values"
+  },
+  "price_form": {
+    "date_non_empty": "The date of the price cannot be empty",
+    "from_asset": "From Asset",
+    "from_non_empty": "The from asset cannot be empty",
+    "historic": {
+      "hint": "1 {fromAsset} was worth {price} {toAsset}"
+    },
+    "latest": {
+      "hint": "1 {fromAsset} is worth {price} {toAsset}"
+    },
+    "price_non_empty": "The price cannot be empty",
+    "to_asset": "To Asset",
+    "to_non_empty": "The to asset cannot be empty",
+    "update_price": "Update price"
+  },
+  "price_management": {
+    "add": {
+      "error": {
+        "description": "Adding the price was not successful: {message}",
+        "title": "Price addition failed"
+      }
+    },
+    "dialog": {
+      "add_title": "Add a manual price",
+      "edit_title": "Edit a manual price"
+    },
+    "edit": {
+      "error": {
+        "description": "Editing the price was not successful: {message}",
+        "title": "Price edit failed"
+      }
+    },
+    "from_asset": "From Asset",
+    "historic": {
+      "add_title": "Add a manual historical price"
+    },
+    "latest": {
+      "add_title": "Add a manual latest price"
+    },
+    "to_asset": "To Asset"
+  },
+  "price_oracle_selection": {
+    "hint": "* Disabling all the oracles will make it impossible to query prices for assets. You may need to click 'Refresh Prices' to apply the changes."
+  },
+  "price_oracle_settings": {
+    "data_name": "price oracle",
+    "historic_prices": "Historic Prices",
+    "latest_prices": "Latest Prices",
+    "latest_prices_update": "Latest order prices updated. You may need to click the 'Refresh Prices' button to apply the changes.",
+    "subtitle": "Manage which price oracles are used, in which order.",
+    "title": "Price oracle settings"
+  },
+  "price_refresh": {
+    "button": "Refresh Prices"
+  },
+  "price_table": {
+    "actions": {
+      "delete": {
+        "tooltip": "Delete the price entry"
+      },
+      "edit": {
+        "tooltip": "Edit the price entry"
+      }
+    },
+    "delete": {
+      "dialog": {
+        "message": "Are you sure you want to delete this price entry?",
+        "title": "Delete the price"
+      },
+      "failure": {
+        "message": "There was an error while deleting the price entry: {message}",
+        "title": "Price delete failed"
+      }
+    },
+    "fetch": {
+      "failure": {
+        "message": "Failed to fetch prices {message}",
+        "title": "Price fetch failure"
+      }
+    },
+    "headers": {
+      "from_asset": "From Asset",
+      "to_asset": "To Asset"
+    },
+    "is_worth": "is worth",
+    "on": "on",
+    "refresh_tooltip": "Refresh prices",
+    "was_worth": "was worth"
+  },
+  "prioritized_list": {
+    "add_tooltip": "Add the {name} to the list",
+    "all_added": "No disabled {namePluralized}",
+    "disabled_items": "{num} disabled {namePluralized}",
+    "item": {
+      "delete": "Disable the {name} entry",
+      "empty": "No price {namePluralized} found!"
+    }
+  },
+  "profit_loss_events": {
+    "cost_basis": {
+      "hide": "Hide Cost Basis",
+      "show": "Show Cost Basis"
+    },
+    "edit_historic_price": "Update historic price",
+    "edit_price_warning": "You will need to regenerate the report to see the updated price in the report events.",
+    "headers": {
+      "pnl_free": "Tax Free PnL",
+      "pnl_taxable": "Taxable PnL",
+      "tax_free_amount": "Tax Free Amount",
+      "taxable_amount": "Taxable Amount"
+    },
+    "same_action": "This events happen on the same action"
+  },
+  "profit_loss_overview": {
+    "headers": {
+      "tax_free_profit_loss": "Tax Free Profit/Loss",
+      "taxable_profit_loss": "Taxable Profit/Loss"
+    },
+    "title": "Overview"
+  },
+  "profit_loss_report": {
+    "actionable": {
+      "actions": {
+        "pin_section": "Pin Section",
+        "regenerate_report": "Re-Generate Report",
+        "unpin_section": "Unpin Section"
+      },
+      "issues_found": "{total} issues found with the generated report",
+      "missing_acquisitions": {
+        "asset_is_ignored": "This asset is ignored",
+        "headers": {
+          "found_amount": "Found Amount",
+          "missing_acquisitions": "Missing Acquisitions",
+          "missing_amount": "Missing Amount",
+          "quick_action": "Quick Action",
+          "total_missing": "Total Amount Missing"
+        },
+        "hint": "Some asset acquisitions are missing. You will need to figure out where you bought them and either import or manually create the relevant acquisition events",
+        "title": "Missing Acquisitions ({total})",
+        "to": "to"
+      },
+      "missing_prices": {
+        "all_prices_filled": "All prices are filled",
+        "headers": {
+          "from_asset": "From Asset",
+          "to_asset": "To Asset"
+        },
+        "hint": "Some events are skipped because we cannot find prices for the related assets. You can help rotki by manually inputting the prices. The entries that you don't fill will keep being skipped.",
+        "if_sure": "If you are sure, ",
+        "input_price": "Input price",
+        "no_filled_prices": "No prices are filled",
+        "price_is_saved": "Price is saved",
+        "price_not_found": "Price not found",
+        "refresh_price_hint": "Rate limiting detected when rokti tried to fetch the historical price. You can either fetch the historical price again manually, or input manual price.",
+        "regenerate_report_nudge": "click button below to re-generate the report.",
+        "skipped_all_events_confirmation": "Are you sure you want to skip all events whose asset price is missing?",
+        "title": "Missing Prices ({total})",
+        "total_skipped_prices": "{total} prices are skipped"
+      },
+      "show_issues": "Show Issues"
+    },
+    "error": {
+      "subtitle": "The report generation was not possible due to an error",
+      "title": "Profit and Loss Report Generation"
+    },
+    "loading": "Please wait while your PnL report is loading",
+    "loading_hint": "Your report generation might take a while depending on the amount of trades and actions you performed during the selected period.",
+    "loading_message": "Please wait while your report is generated...",
+    "report_period": "Report starting from {start} to {end}",
+    "settings_tooltip": "Open the accounting settings",
+    "upgrade": "{processed} total events have been processed starting from {start}.",
+    "upgrade2": "The limit of the free version has been reached. To get the full report please upgrade to {link}"
+  },
+  "profit_loss_reports": {
+    "columns": {
+      "created": "Creation Date",
+      "end": "Period End",
+      "start": "Period Start",
+      "taxable_profit_loss": "Taxable P/L",
+      "taxfree_profit_loss": "Tax Free P/L"
+    },
+    "debug": {
+      "export_data": "Export debug data",
+      "export_message": {
+        "failure": "Export PnL report debug data failed",
+        "success": "PnL report debug data exported successfully",
+        "title": "Export PnL report debug data"
+      },
+      "import_data": "Import debug data",
+      "import_data_dialog": {
+        "title": "Import PnL report debug data"
+      },
+      "import_message": {
+        "failure": "Import PnL report debug data failed: {message}",
+        "success": "PnL report debug data imported successfully",
+        "title": "Import PnL report debug data"
+      },
+      "title": "Debug"
+    },
+    "notification": {
+      "action": "See the report",
+      "message": "PnL report from {start} to {end} has been generated.",
+      "title": "PnL report has been generated"
+    },
+    "title": "Generated Reports"
+  },
+  "progress_screen": {
+    "progress": "{progress} %"
+  },
+  "purge_selector": {
+    "centralized_exchanges": "Centralized Exchanges",
+    "centralized_exchange_to_clear": {
+      "label": "Centralized exchange to clear",
+      "hint": "Empty this field to remove the data for all centralized exchanges"
+    },
+    "chain_to_clear": {
+      "label": "Chain to clear",
+      "hint": "Empty this field to remove the transaction data for all chains"
+    },
+    "decentralized_exchanges": "Decentralized Exchanges",
+    "decentralized_exchange_to_clear": {
+      "label": "Decentralized exchange to clear",
+      "hint": "Empty this field to remove the data for all decentralized exchanges"
+    },
+    "defi_modules": "DeFi Modules",
+    "defi_module_to_clear": {
+      "label": "DeFi module to clear",
+      "hint": "Empty this field to remove the data for all defi modules"
+    },
+    "label": "Select a data source",
+    "tooltip": "Purge the cached data for the selected source",
+    "transactions": "Transactions"
+  },
+  "queried_address_dialog": {
+    "add": "Add address",
+    "all_address_queried": "All your ethereum addresses are queried for {module}",
+    "remove_tooltip": "Remove the address from the queried addresses",
+    "subtitle": "Manage the addresses that will be queried for {module}",
+    "title": "Queried Addresses"
+  },
+  "reports_table": {
+    "delete": "Delete report",
+    "load": "Load report"
+  },
+  "rounding_settings": {
+    "amount_rounding": "Amount Rounding",
+    "amount_rounding_hint": "Specify how the amount (e.g. the amount of an owned asset) is rounded.",
+    "round": {
+      "down": "Round down",
+      "down_description": "Rounds towards zero",
+      "half_even": "Half even",
+      "half_even_description": "Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour",
+      "up": "Round up",
+      "up_description": "Rounds away from zero"
+    },
+    "subtitle": "Set how the displayed amounts will be rounded in the frontend",
+    "title": "Amount rounding",
+    "value_rounding": "Value Rounding",
+    "value_rounding_hint": "Specify how the value (e.g the FIAT value of an owned asset) is rounded."
+  },
+  "rpc_node_form": {
+    "active": "Active",
+    "active_hint": "Only active nodes will be queried",
+    "endpoint": "Endpoint",
+    "owned": "Owned",
+    "owned_hint": "Enable if this node is a private node owned by the user",
+    "weight": "Weight",
+    "weight_hint": "Node weight {weight}/100 (when adjusting a public node's weight other nodes will be adjusted accordingly)",
+    "weight_per_hundred": "/100"
+  },
+  "settings": {
+    "not_saved": "Setting not saved",
+    "saved": "Setting saved"
+  },
+  "snapshot_action_button": {
+    "force_save": "Force save",
+    "ignore_errors_label": "Ignore Errors",
+    "ignore_errors_tooltip": "Save the balance snapshot ignoring any errors on external APIs. This can cause the snapshot to be incomplete.",
+    "menu_tooltip": "View the date of the last balances snapshot",
+    "messages": {
+      "failed_description": "Importing snapshot failed: {message}",
+      "success_description": "Snapshot successfully imported. You will be logged out now.",
+      "title": "Snapshot import"
+    },
+    "snapshot_title": "Last balances snapshot",
+    "snapshot_tooltip": "This will force taking a snapshot of all your balances, ignoring any cache. Use this sparingly as it may lead to you being rate-limited."
+  },
+  "snapshot_import_dialog": {
+    "balance_snapshot_file": "Balance snapshot file",
+    "balance_snapshot_file_suggested": "Suggested filename: balances_snapshot_import.csv",
+    "location_data_snapshot_file": "Location data snapshot file",
+    "location_data_snapshot_suggested": "Suggested filename: location_data_snapshot_import.csv",
+    "title": "Import snapshot manually"
+  },
+  "sorting_selector": {
+    "desc": {
+      "sort_asc_tooltip": "Change sort to ascending",
+      "sort_desc_tooltip": "Change sort to descending"
+    }
+  },
+  "staking": {
+    "eth2": "ETH",
+    "kraken": "Kraken",
+    "liquity": "Liquity"
+  },
+  "staking_page": {
+    "dropdown_hint": "Select a location to see more details",
+    "dropdown_label": "Select location",
+    "page": {
+      "description": "Select one of the supported locations to see more information about your staked assets.",
+      "title": "Staking Locations"
+    }
+  },
+  "statistics": {
+    "no_premium_label": "Statistics are"
+  },
+  "statistics_graph_settings": {
+    "infer_zero_timed_balances": {
+      "label": "Infer zero timed balances for assets that have no balance at a specific time. This is useful for showing zero balance periods in graphs.",
+      "title": "Infer zero timed balances"
+    },
+    "multiplier": {
+      "label": "Multiplier",
+      "off": "No missed snapshots will be considered as being zero.",
+      "on": "If there is a period of {period} hours or more between two existing balance snapshots then the graph will consider zero balances for that period.",
+      "subtitle": "Set after how many hours between two existing balance snapshots the graph will consider zero balances for that period.",
+      "title": "Missing snapshot multiplier",
+      "validations": {
+        "positive_number": "Must be positive number"
+      }
+    },
+    "tooltip": "Asset graph setting"
+  },
+  "summary_card": {
+    "refresh_tooltip": "Refresh {name} balances",
+    "title": "{name} balances"
+  },
+  "sushiswap": {
+    "loading": "Please wait while your liquidity pools are getting loaded...",
+    "premium": "Sushiswap feature"
+  },
+  "sync_buttons": {
+    "download_tooltip": "Pull the saved data from the server and replace your local database",
+    "upload_tooltip": "Push your local database to the server and replace all data there"
+  },
+  "sync_indicator": {
+    "last_data_upload": "Last premium database sync",
+    "menu_tooltip": "View the time of the last premium database sync and perform manual sync.",
+    "upload_confirmation": {
+      "action": "Push | Pull",
+      "confirm_check": "I understand",
+      "message_download": "By force pulling, your local database will be replaced with data pulled from the rotki server. There is no way to recover any overwritten data, or revert this action. Please be careful when performing this action as it may cause unintended data loss. By proceeding you acknowledge that you understand the dangers of using this action.",
+      "message_download_relogin": "After performing the pull, a manual re-login will be required.",
+      "message_upload": "By force pushing, any previous synced data residing in the rotki server will be overwritten. There is no way to recover any overwritten data, or revert this action. Please be careful when performing this action as it may cause unintended data loss. By proceeding you acknowledge that you understand the dangers of using this action.",
+      "title": "Force Push | Force Pull"
+    },
+    "db_upload_result": {
+      "message": "We could not complete the upload because {reason}",
+      "title": "Database sync attempt unsuccessful"
+    },
+    "setting": {
+      "title": "Sync setting",
+      "ask_user_upon_size_discrepancy": {
+        "label": "Force-push when a size discrepancy occurs during automatic database sync.",
+        "confirm_label": "Force-push whenever a size discrepancy occurs."
+      }
+    }
+  },
+  "table_filter": {
+    "asset_suggestion": "Type the asset symbol or address to search.",
+    "exclusion": {
+      "description": "Use operator `!=` to filter out option, e.g.",
+      "example": "type != evm event"
+    },
+    "hint": {
+      "description": "Type the filter and then press enter e.g.",
+      "edit_note": "Click applied filter to edit the value",
+      "example": "start = 26/05/2022"
+    },
+    "label": "Combined filters",
+    "saved_filters": {
+      "actions": {
+        "add": "Save current filter to list",
+        "apply": "Apply this saved filter",
+        "list": "Open saved filter list",
+        "remove": "Remove this saved filter"
+      },
+      "added": "Filter saved",
+      "empty": "You don't have any saved filter. Apply the filter as usual, and click this button {button} to save the filter.",
+      "saving": {
+        "limited": "You are only allowed to save up to {limit} filters. Remove other filters to be able to add again.",
+        "title": "Failed to save filter"
+      }
+    },
+    "start_typing": "Type the value for the {search} filter",
+    "title": "Available filters",
+    "unsupported_filter": "Unsupported filter:"
+  },
+  "tag_creator": {
+    "labels": {
+      "background": "Background",
+      "foreground": "Foreground"
+    },
+    "refresh_tooltip": "Creates a random color combination",
+    "validation": {
+      "empty_name": "Please provide a tag name"
+    }
+  },
+  "tag_filter": {
+    "label": "Filter by tag(s)"
+  },
+  "tag_manager": {
+    "confirmation": {
+      "message": "Are you sure you want to delete {tagToDelete}? This will also remove all mappings of this tag.",
+      "title": "Confirm tag deletion"
+    },
+    "my_tags": "My Tags",
+    "subtitle": "Create new tags or modify existing",
+    "title": "Tag Manager"
+  },
+  "task_manager": {
+    "error": "An error occurred while processing task [{taskId}] '{title}': {error}"
+  },
+  "theme_manager_lock": {
+    "description": "Theme customization is only available with a premium subscription",
+    "subtitle": "Manage colors for the app theme",
+    "title": "Theme"
+  },
+  "theme_switch_lock": {
+    "tooltip": "Switching to dark mode is only available under a premium subscription"
+  },
+  "timeframe_settings": {
+    "default_timeframe": "Dashboard graph default timeframe",
+    "default_timeframe_description": "Set the default time frame for the dashboard graph. This timeframe will be pre-selected upon login. By default it will remember the previous session's selection.",
+    "inactive_timeframes": "Inactive Timeframes",
+    "visible_timeframes": "Visible Timeframes"
+  },
+  "trade_history": {
+    "loading": "Please wait while your trades are getting loaded..."
+  },
+  "transactions": {
+    "actions": {
+      "add_event": "Add new event",
+      "add_event_here": "Add new event here",
+      "redecode_events": "Redecode events",
+      "delete_transaction": "Delete transaction & events"
+    },
+    "cache_refresh": {
+      "refreshing": "Refreshing protocol cache data"
+    },
+    "dialog": {
+      "add_tx": "Add transaction by tx hash",
+      "delete": {
+        "message": "Are you sure you want to delete this transaction and its events? You will have to purge all transactions or add by the transaction hash to restore them.",
+        "title": "Delete transaction and events",
+        "error": {
+          "message": "Failed: {message}",
+          "title": "Delete EVM transaction"
+        }
+      }
+    },
+    "events": {
+      "actions": {
+        "delete": "Delete event",
+        "edit": "Edit event"
+      },
+      "confirmation": {
+        "delete": {
+          "message": "Are you sure you want to delete the event?",
+          "title": "Delete Event"
+        },
+        "ignore": {
+          "action": "Yes, Ignore the Transaction",
+          "message": "A transaction requires at least 1 event. Do you want to ignore the transaction in accounting instead?",
+          "title": "Cannot Delete Event"
+        },
+        "reset": {
+          "message": "There are custom events in this transaction",
+          "options": {
+            "keep_custom_events": "Don't remove my custom events",
+            "remove_custom_events": "Remove custom events and redecode the transaction"
+          }
+        }
+      },
+      "customized_event": "Customized event",
+      "dialog": {
+        "add": {
+          "title": "Add Event"
+        },
+        "edit": {
+          "title": "Edit Event"
+        }
+      },
+      "export": {
+        "confirmation_message": "Are you sure you want to export this document with the selected filters applied?"
+      },
+      "form": {
+        "address": {
+          "label": "Address",
+          "validation": {
+            "valid": "The address is invalid, fill it with valid address"
+          }
+        },
+        "advanced": "Advanced fields",
+        "amount": {
+          "validation": {
+            "non_empty": "The amount field cannot be empty."
+          }
+        },
+        "asset": {
+          "validation": {
+            "non_empty": "The asset field cannot be empty"
+          }
+        },
+        "asset_price": {
+          "hint": "If you change the asset price, rotki will save the historic price that will be considered in PnL report calculation",
+          "label": "Asset price in {symbol} at the time"
+        },
+        "block_number": {
+          "label": "Block Number",
+          "validation": {
+            "non_empty": "The block number field cannot be empty."
+          }
+        },
+        "counterparty": {
+          "validation": {
+            "valid": "The counterparty field is invalid, fill with available counterparties, or valid address"
+          }
+        },
+        "datetime": {
+          "hint": "The date & time of when the event happened"
+        },
+        "depositor": {
+          "label": "Depositor Address",
+          "validation": {
+            "non_empty": "The depositor field cannot be empty.",
+            "valid": "The depositor is invalid, fill it with valid address"
+          }
+        },
+        "event_identifier": {
+          "label": "Event Identifier",
+          "validation": {
+            "non_empty": "The event identifier field cannot be empty."
+          }
+        },
+        "event_subtype": {
+          "label": "Event Subtype",
+          "validation": {
+            "non_empty": "The event subtype field cannot be empty."
+          }
+        },
+        "event_type": {
+          "label": "Event Type",
+          "validation": {
+            "non_empty": "The event type field cannot be empty."
+          }
+        },
+        "extra_data": {
+          "label": "Extra Data"
+        },
+        "fee_recipient": {
+          "label": "Fee Recipient Address",
+          "validation": {
+            "non_empty": "The fee recipient field cannot be empty.",
+            "valid": "The fee recipient is invalid, fill it with valid address"
+          }
+        },
+        "fiat_value": {
+          "validation": {
+            "non_empty": "The {currency} value field cannot be empty."
+          }
+        },
+        "is_exit": {
+          "label": "Is Exited?"
+        },
+        "is_mev_reward": {
+          "label": "Is Mev Reward?"
+        },
+        "location": {
+          "validation": {
+            "non_empty": "The location field cannot be empty."
+          }
+        },
+        "location_label": {
+          "label": "Location Label"
+        },
+        "notes": {
+          "hint": "[Optional] Additional notes to store for the action"
+        },
+        "product": {
+          "label": "Product",
+          "validation": {
+            "valid": "The product field is invalid, fill with available products"
+          }
+        },
+        "resulting_combination": {
+          "label": "Resulting combination",
+          "unknown": "The resulting combination is unknown, this event won't be processed correctly."
+        },
+        "sequence_index": {
+          "label": "Sequence Index",
+          "validation": {
+            "non_empty": "The sequence index field cannot be empty."
+          }
+        },
+        "tx_hash": {
+          "validation": {
+            "non_empty": "The tx hash field cannot be empty.",
+            "valid": "The tx hash is invalid, fill it with valid tx hash"
+          }
+        },
+        "validator_index": {
+          "label": "Validator Index",
+          "validation": {
+            "non_empty": "The validator index field cannot be empty."
+          }
+        },
+        "withdrawal_address": {
+          "label": "Withdrawal Address",
+          "validation": {
+            "non_empty": "The withdrawal field cannot be empty.",
+            "valid": "The withdrawal is invalid, fill it with valid address"
+          }
+        }
+      },
+      "headers": {
+        "eth_block_event": "Block {blockNumber} produced",
+        "eth_deposit_event": "Deposit events {txHash}",
+        "eth_withdrawal_event": "Withdrawal for validator {validatorIndex}",
+        "event_identifier": "Event information",
+        "evm_event": "Transaction {txHash}",
+        "history_event": "{location} event"
+      },
+      "loading": "Loading events...",
+      "no_data": "Events are hidden because they contain ignored assets",
+      "skipped": {
+        "csv_export_error": "There was an error with export",
+        "download_failed": "Download of CSV is not possible",
+        "headers": {
+          "number": "Number of skipped events"
+        },
+        "no_skipped_events": "No skipped events found",
+        "reprocess": {
+          "action": "Reprocess events",
+          "failed": {
+            "title": "Error reprocessing skipped events",
+            "no_processed_events": "No skipped external events processed"
+          },
+          "success": {
+            "all": "All skipped external events have been processed",
+            "some": "{successful} of {total} skipped external events have been processed",
+            "title": "Skipped events processed"
+          }
+        },
+        "title": "Skipped external events"
+      },
+      "view": {
+        "hide": "Hide events",
+        "load_more": "Load more events ({length})",
+        "show": "Show events ({length})"
+      }
+    },
+    "events_decoding": {
+      "actions": {
+        "redecode_missing_events": "Redecode missing events"
+      },
+      "confirmation": "This action will redecode all the events except the customized ones, and may take a long time depending on the amount of transactions to process. Are you sure you want to continue?",
+      "decoded": {
+        "true": "All transactions have been processed.",
+        "false": "Some transactions need to be processed."
+      },
+      "fetching": "Checking transaction decoding status",
+      "transactions_processed": "{processed} / {total} transactions processed",
+      "preparing": "Decoding transactions, please wait...",
+      "progress": "Progress",
+      "redecode_all": "Redecode All Transactions",
+      "title": "Transaction decoding status",
+      "undecoded_transactions": "Undecoded transactions",
+      "decoding": {
+        "processing": "Decoding {count} transaction | Decoding {count} of {total} transactions",
+        "pending": "{count} Undecoded transaction | {count} Undecoded transactions",
+        "done": "Decoded {count} transaction | Decoded {count} transactions",
+        "all": "Redecoding EVM transactions",
+        "all_done": "Done redecoding EVM transactions"
+      }
+    },
+    "filter": {
+      "account": "Filter by account",
+      "address": "filter by counterparty address",
+      "asset": "filter by the asset of the events",
+      "customized_only": "Show only customized events",
+      "date_hint": "format {format} HH:mm:ss (time/seconds are optional)",
+      "end_date": "filter by the end date of the transaction period",
+      "entry_type": "filter by entry type",
+      "event_type": "filter by event type",
+      "event_subtype": "filter by event sub type",
+      "location": "filter by event location",
+      "product": "filter by product",
+      "protocol": "filter by the protocol of the events",
+      "show_ignored_assets": "Show entries with ignored assets",
+      "start_date": "filter by the start date of the transaction period",
+      "tx_hash": "filter by tx hash(es)",
+      "validator_index": "filter by validator index(es)"
+    },
+    "form": {
+      "account": {
+        "label": "Account to be associated with the transaction",
+        "validation": {
+          "non_empty": "The account field cannot be empty"
+        }
+      },
+      "tx_hash": {
+        "validation": {
+          "non_empty": "The tx hash field cannot be empty.",
+          "valid": "Please input valid tx hash."
+        }
+      }
+    },
+    "ignore": "Ignore events in Accounting",
+    "protocol_cache_updates": {
+      "hint": "Refreshing {protocol} cache on {chain} ({processed}/{total})",
+      "no_ongoing": "No ongoing refresh happening.",
+      "outdated_data": "Outdated pools",
+      "refreshing": "Refreshing protocol cache",
+      "title": "Protocol cache updates status",
+      "pools_refreshed": "{processed} / {total} pools refreshed",
+      "protocol_pools_refreshed": "{processed} / {total} {protocol} pools refreshed"
+    },
+    "query_status": {
+      "date_range": "Querying {status} for {address} between {start} and {end}",
+      "done_date_range": "Done querying all transactions for {address} between {start} and {end}",
+      "done_end_date": "Done querying all transactions for {address} until {end}",
+      "done_group": "Done querying all transactions information for {count} address | Done querying all transactions information for {count} addresses",
+      "end_date": "Querying {status} for {address} until {end}",
+      "group": "Querying evm transactions information for {count} address | Querying evm transactions information for {count} addresses",
+      "latest_period_date_range": "Latest successfully queried period is between {start} and {end}",
+      "latest_period_end_date": "Latest successfully queried period is until {end}",
+      "statuses": {
+        "querying_evm_tokens_transactions": "evm tokens transactions",
+        "querying_internal_transactions": "evm internal transactions",
+        "querying_transactions": "evm transactions"
+      },
+      "title": "Evm Transactions Query Status"
+    },
+    "query_status_events": {
+      "date_range": "Querying events for {name} between {start} and {end}",
+      "done_date_range": "Done querying all events for {name} between {start} and {end}",
+      "done_end_date": "Done querying all events for {name} until {end}",
+      "done_group": "Done querying all events for {count} location | Done querying all events for {count} locations",
+      "end_date": "Querying events for {name} until {end}",
+      "group": "Querying events for {count} location | Querying events for {count} locations",
+      "latest_period_date_range": "Latest successfully queried period is between {start} and {end}",
+      "latest_period_end_date": "Latest successfully queried period is until {end}",
+      "title": "History Events Query Status"
+    },
+    "query_all": {
+      "done_group": "Done querying all events and transactions",
+      "group": "Querying events and transactions",
+      "modal_title": "Query Status"
+    },
+    "refresh_tooltip": "Fetch latest events",
+    "title": "History Events",
+    "unignore": "Unignore events in Accounting"
+  },
+  "underlying_token_manager": {
+    "delete_tooltip": "Delete the underlying token",
+    "edit_tooltip": "Edit an underlying token",
+    "hint": "The percentage of an underlying asset in the token. e.g. A uniswap lp token is consisted of two underlying tokens with a 50% weight each.",
+    "labels": {
+      "tokens": "Underlying tokens",
+      "weight": "Weight"
+    },
+    "tokens": {
+      "token_kind": "Token Kind",
+      "weight": "Weight",
+      "weight_percentage": "{weight} %"
+    },
+    "validation": {
+      "address_non_empty": "Address cannot be empty",
+      "non_empty": "Please set a weight value",
+      "not_valid": "The specified weight does not seem like a valid value",
+      "out_of_range": "Weight can be from 1-100%",
+      "valid": "Please input valid ETH address"
+    }
+  },
+  "uniswap": {
+    "assets_non_premium": "Upgrade to @:uniswap.premium to see assets information",
+    "loading": "Please wait while your liquidity pools are getting loaded...",
+    "loading_non_premium": "Loading the liquidity pool balances might take a while... Consider upgrading to {0} for faster load times.",
+    "premium": "premium",
+    "price_range": "Price Range"
+  },
+  "update_indicator": {
+    "version": "An Updated Version ({appVersion}) of rotki is available"
+  },
+  "update_notifier": {
+    "update_available": "An updated version of the frontend is available."
+  },
+  "update_popup": {
+    "download_failed": {
+      "message": "An error occurred while downloading the application update. For more information check the application log file (rotki_electron.log)."
+    },
+    "download_nudge": "Would you like to download it?",
+    "download_progress": "Please wait while the application update is downloading",
+    "downloaded": "The updated version will be installed on the next restart. Would you like to restart the application now to apply the update?",
+    "install_failed": {
+      "message": "An error occurred while installing the application update: {message}"
+    },
+    "messages": "A new version of rotki is available. See {releaseNotes}.",
+    "release_notes": "release notes",
+    "restart": "rotki will restart in a moment to apply the update."
+  },
+  "upgrade_row": {
+    "events": "Processed {limit} out of {total} {label} from {from} until {to}. To view more please upgrade to {link}",
+    "rotki_premium": "rotki Premium",
+    "upgrade": "Displaying {limit} out of {total} {label}. To view more please upgrade to {link}"
+  },
+  "user_dropdown": {
+    "change_privacy_mode": {
+      "label": "Change Privacy Mode",
+      "normal_mode": {
+        "description": "Show both amount and percentage",
+        "label": "Normal"
+      },
+      "private_mode": {
+        "description": "Hide amount and percentage",
+        "label": "Private"
+      },
+      "scramble": {
+        "label": "Scramble"
+      },
+      "semi_private_mode": {
+        "description": "Hide amount and show percentage",
+        "label": "Semi Private"
+      }
+    },
+    "confirmation": {
+      "message": "Are you sure you want to log out of your current rotki session?",
+      "title": "Confirmation Required"
+    },
+    "logout": "Logout",
+    "settings": "Settings",
+    "switch_theme": "Switch Theme"
+  },
+  "validator_filter_input": {
+    "label": "Select validator"
+  },
+  "watcher_dialog": {
+    "add_error": "Error adding the watcher: {message}",
+    "add_success": "Successfully added watcher.",
+    "add_watcher": "Add watcher",
+    "delete_error": "Error deleting the watcher: {message}",
+    "delete_success": "Successfully deleted watcher.",
+    "edit": "Edit watchers",
+    "edit_error": "Error editing the watcher: {message}",
+    "edit_success": "Successfully edited watcher.",
+    "labels": {
+      "operation": "Operation",
+      "type": "Watcher Type"
+    },
+    "ratio": {
+      "ge": ">= (greater than or equal to)",
+      "gt": ">  (greater than)",
+      "le": "<= (less than or equal to)",
+      "lt": "<  (less than)"
+    },
+    "types": {
+      "make_collateralization_ratio": "Collateralization Ratio Watcher (Maker)"
+    }
+  },
+  "welcome": {
+    "update": {
+      "learn_more": "Learn More",
+      "title": "rotki has been updated",
+      "text": "You have just updated rotki to v{version}. To learn more about the features and improvements included in this release press the button below."
+    }
+  },
+  "win_unsupported": {
+    "header": "Unsupported Windows Version",
+    "message": "rotki's minimum supported Windows version is Windows 8(6.2)"
+  },
+  "yearn_asset_table": {
+    "headers": {
+      "roi": "ROI",
+      "underlying_asset": "Underlying Asset",
+      "vault": "Vault",
+      "vault_asset": "Vault Asset",
+      "version": "Version"
+    },
+    "title": "Yearn Vaults"
+  }
+}

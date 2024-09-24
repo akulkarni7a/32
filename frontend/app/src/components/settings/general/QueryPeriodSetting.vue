@@ -1,0 +1,74 @@
+<script setup lang="ts">
+import useVuelidate from '@vuelidate/core';
+import { between, helpers, required } from '@vuelidate/validators';
+import { toMessages } from '@/utils/validation';
+
+const queryPeriod = ref<string>('5');
+const minQueryPeriod = 5;
+const maxQueryPeriod = 3600;
+
+const { t } = useI18n();
+
+const rules = {
+  queryPeriod: {
+    required: helpers.withMessage(t('frontend_settings.validation.periodic_query.non_empty'), required),
+    between: helpers.withMessage(
+      t('frontend_settings.validation.periodic_query.invalid_period', {
+        start: minQueryPeriod,
+        end: maxQueryPeriod,
+      }),
+      between(minQueryPeriod, maxQueryPeriod),
+    ),
+  },
+};
+
+const { queryPeriod: currentPeriod } = storeToRefs(useFrontendSettingsStore());
+
+function resetQueryPeriod() {
+  set(queryPeriod, get(currentPeriod).toString());
+}
+
+const v$ = useVuelidate(rules, { queryPeriod }, { $autoDirty: true });
+const { callIfValid } = useValidation(v$);
+
+const { restart } = useMonitorStore();
+
+const transform = (value: string) => (value ? Number.parseInt(value) : value);
+
+onMounted(() => {
+  resetQueryPeriod();
+});
+</script>
+
+<template>
+  <div class="mt-8">
+    <div class="text-h6 mb-3">
+      {{ t('frontend_settings.subtitle.query') }}
+    </div>
+    <SettingsOption
+      #default="{ error, success, update }"
+      class="mt-1"
+      setting="queryPeriod"
+      frontend-setting
+      :transform="transform"
+      :error-message="t('frontend_settings.validation.periodic_query.error')"
+      @updated="restart()"
+      @finished="resetQueryPeriod()"
+    >
+      <RuiTextField
+        v-model="queryPeriod"
+        variant="outlined"
+        color="primary"
+        class="general-settings__fields__periodic-client-query-period"
+        :label="t('frontend_settings.label.query_period')"
+        :hint="t('frontend_settings.label.query_period_hint')"
+        type="number"
+        :min="minQueryPeriod"
+        :max="maxQueryPeriod"
+        :success-messages="success"
+        :error-messages="error || toMessages(v$.queryPeriod)"
+        @update:model-value="callIfValid($event, update)"
+      />
+    </SettingsOption>
+  </div>
+</template>
